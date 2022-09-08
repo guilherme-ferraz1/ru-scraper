@@ -153,7 +153,7 @@ const formatData = (allMenu) => {
     ]
 
     return {
-        "dataFinal": dataFinal.replace(/\s/g, ''),
+        "dataFinal": dataFinal?.replace(/\s/g, ''),
         "cardapio": menu
     }
 }
