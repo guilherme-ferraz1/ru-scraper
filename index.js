@@ -30,7 +30,6 @@ const readData = async (url) => {
                       }
                 });
                 file.close();
-                fs.unlinkSync('./dummy.pdf')
             });
         })
     })
