@@ -37,7 +37,7 @@ const readData = async (url) => {
 
 const formatData = (allMenu) => {
     // segunda feira -- feito
-    const carneSegunda = allMenu.find(({ x, y }) => Math.round(x) == 182 && Math.round(y) == 144)?.str
+    const carneSegunda = allMenu.find(({ x, y }) => Math.round(x) == 182 && Math.round(y) == 144)?.str?.replace(':','')
     const complementoSegunda = allMenu.find(({ x, y }) => Math.round(x) == 220 && Math.round(y) == 168)?.str
     const salada1Segunda = allMenu.find(({ x, y }) => Math.round(x) == 194 && Math.round(y) == 180)?.str
     const salada2Segunda = allMenu.find(({ x, y }) => Math.round(x) == 194 && Math.round(y) == 193)?.str
@@ -45,7 +45,7 @@ const formatData = (allMenu) => {
     const molhoSegunda = allMenu.find(({ x, y }) => Math.round(x) == 451 && Math.round(y) == 205)?.str
 
     // terca feira -- feito
-    const carneTerca = allMenu.find(({ x, y }) => Math.round(x) == 182 && Math.round(y) == 217)?.str
+    const carneTerca = allMenu.find(({ x, y }) => Math.round(x) == 182 && Math.round(y) == 217)?.str?.replace(':','')
     const complementoTerca = allMenu.find(({ x, y }) => Math.round(x) == 220 && Math.round(y) == 242)?.str
     const salada1Terca = allMenu.find(({ x, y }) => Math.round(x) == 194 && Math.round(y) == 254)?.str
     const salada2Terca = allMenu.find(({ x, y }) => Math.round(x) == 194 && Math.round(y) == 266)?.str
@@ -53,7 +53,7 @@ const formatData = (allMenu) => {
     const molhoTerca = allMenu.find(({ x, y }) => Math.round(x) == 454 && Math.round(y) == 278)?.str
 
     // quarta feira -- feito
-    const carneQuarta = allMenu.find(({ x, y }) => Math.round(x) == 182 && Math.round(y) == 291)?.str
+    const carneQuarta = allMenu.find(({ x, y }) => Math.round(x) == 182 && Math.round(y) == 291)?.str?.replace(':','')
     const complementoQuarta = allMenu.find(({ x, y }) => Math.round(x) == 220 && Math.round(y) == 315)?.str
     const salada1Quarta = allMenu.find(({ x, y }) => Math.round(x) == 194 && Math.round(y) == 327)?.str
     const salada2Quarta = allMenu.find(({ x, y }) => Math.round(x) == 194 && Math.round(y) == 340)?.str
@@ -61,7 +61,7 @@ const formatData = (allMenu) => {
     const molhoQuarta = allMenu.find(({ x, y }) => Math.round(x) == 460 && Math.round(y) == 352)?.str
 
     // quinta feira -- feito
-    const carneQuinta = allMenu.find(({ x, y }) => Math.round(x) == 177 && Math.round(y) == 364)?.str
+    const carneQuinta = allMenu.find(({ x, y }) => Math.round(x) == 177 && Math.round(y) == 364)?.str?.replace(':','')
     const complementoQuinta = allMenu.find(({ x, y }) => Math.round(x) == 220 && Math.round(y) == 389)?.str
     const salada1Quinta = allMenu.find(({ x, y }) => Math.round(x) == 194 && Math.round(y) == 401)?.str
     const salada2Quinta = allMenu.find(({ x, y }) => Math.round(x) == 194 && Math.round(y) == 413)?.str
@@ -69,7 +69,7 @@ const formatData = (allMenu) => {
     const molhoQuinta = allMenu.find(({ x, y }) => Math.round(x) == 456 && Math.round(y) == 425)?.str
 
     // sexta feira -- feito
-    const carneSexta = allMenu.find(({ x, y }) => Math.round(x) == 177 && Math.round(y) == 438)?.str
+    const carneSexta = allMenu.find(({ x, y }) => Math.round(x) == 177 && Math.round(y) == 438)?.str?.replace(':','')
     const complementoSexta = allMenu.find(({ x, y }) => Math.round(x) == 220 && Math.round(y) == 462)?.str
     const salada1Sexta = allMenu.find(({ x, y }) => Math.round(x) == 194 && Math.round(y) == 474)?.str
     const salada2Sexta = allMenu.find(({ x, y }) => Math.round(x) == 194 && Math.round(y) == 487)?.str
@@ -77,7 +77,7 @@ const formatData = (allMenu) => {
     const molhoSexta = allMenu.find(({ x, y }) => Math.round(x) == 465 && Math.round(y) == 499)?.str
 
     // sabado -- feito
-    const carneSabado = allMenu.find(({ x, y }) => Math.round(x) == 177 && Math.round(y) == 511)?.str
+    const carneSabado = allMenu.find(({ x, y }) => Math.round(x) == 177 && Math.round(y) == 511)?.str?.replace(':','')
     const complementoSabado = allMenu.find(({ x, y }) => Math.round(x) == 220 && Math.round(y) == 536)?.str
     const salada1Sabado = allMenu.find(({ x, y }) => Math.round(x) == 194 && Math.round(y) == 548)?.str
     const salada2Sabado = allMenu.find(({ x, y }) => Math.round(x) == 194 && Math.round(y) == 560)?.str
@@ -85,7 +85,7 @@ const formatData = (allMenu) => {
     const molhoSabado = allMenu.find(({ x, y }) => Math.round(x) == 471 && Math.round(y) == 572)?.str
 
     // domingo -- feito
-    const carneDomingo = allMenu.find(({ x, y }) => Math.round(x) == 177 && Math.round(y) == 585)?.str
+    const carneDomingo = allMenu.find(({ x, y }) => Math.round(x) == 177 && Math.round(y) == 585)?.str?.replace(':','')
     const complementoDomingo = allMenu.find(({ x, y }) => Math.round(x) == 220 && Math.round(y) == 609)?.str
     const salada1Domingo = allMenu.find(({ x, y }) => Math.round(x) == 194 && Math.round(y) == 621)?.str
     const sobremesaDomingo = allMenu.find(({ x, y }) => Math.round(x) == 205 && Math.round(y) == 634)?.str
