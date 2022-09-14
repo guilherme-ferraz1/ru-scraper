@@ -114,12 +114,13 @@ const formatData = (allMenu) => {
     const sobremesaDomingo = fixedMenu[37][2] ?? undefined
     const molhoDomingo = fixedMenu[37][1] ?? undefined
 
-    const lenght = fixedMenu[0][0].length
-    const dia = fixedMenu[0][0].substring(5, 7)
-    const mes = mesesDic[fixedMenu[0][0].substring(11, lenght - 8)]
-    const ano = fixedMenu[0][0].substring(lenght - 4, lenght)
+    const lenght = fixedMenu[0][0]?.length
+    const dia = fixedMenu[0][0].substring(5, 7) ?? undefined
+    const mes = mesesDic[fixedMenu[0][0].substring(11, lenght - 8)] ?? undefined
+    const ano = fixedMenu[0][0].substring(lenght - 4, lenght) ?? undefined
 
-    const dataFinal = `${dia}/${mes}/${ano}`
+    let dataFinal = undefined
+    if (dia && mes && ano ) dataFinal = `${dia}/${mes}/${ano}`
 
     const menu = [
         {
@@ -181,7 +182,7 @@ const formatData = (allMenu) => {
     ]
 
     return {
-        "dataFinal": dataFinal,
+        "dataFinal": dataFinal ?? undefined,
         "cardapio": menu
     }
 }
