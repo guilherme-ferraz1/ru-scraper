@@ -1,5 +1,3 @@
-const fs = require('fs');
-const PDFExtract = require('pdf.js-extract').PDFExtract;
 const CheerioModule = require('cheerio');
 const axios = require('axios')
 
@@ -11,92 +9,122 @@ const port = process.env.PORT
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-const pdfExtract = new PDFExtract();
-
-const https = require('https');
-
-const readData = async (url) => {
-    return new Promise((resolve, reject) => {
-        https.get(url, (response) => {
-            const file = fs.createWriteStream('./dummy.pdf');
-            response.pipe(file);
-            file.on("finish", async () => {
-                pdfExtract.extract('./dummy.pdf', {})
-                  .then((data) => {
-                    try {
-                        resolve(data.pages[0].content.filter(({str}) => str != ' ' && str != ''))
-                      } catch (e) {
-                        reject(e.message);
-                      }
-                });
-                file.close();
-            });
-        })
-    })
+const mesesDic = {
+    "janeiro": '01',
+    "fevereiro": '02',
+    "março": '03',
+    "abril": '04',
+    "maio": '05',
+    "junho": '06',
+    "julho": '07',
+    "agosto": '08',
+    "setembro": '09',
+    "outubro": '10',
+    "novembro": '11',
+    "dezembro": '12',
 }
 
-const formatData = (allMenu) => {
+const convert = (html) => {
+    var jsonResponse = [];
+    var $ = CheerioModule.load(html);
+
+    $('table').each(function(i, table) {
+      var tableAsJson = [];
+      var columnHeadings = [];
+      $(table).find('tr').each(function(i, row) {
+        $(row).find('th').each(function(j, cell) {
+          columnHeadings[j] = $(cell).text().trim();
+        });
+      });
+
+      $(table).find('tr').each(function(i, row) {
+        var rowAsJson = {};
+        $(row).find('td').each(function(j, cell) {
+          if (columnHeadings[j]) {
+            rowAsJson[ columnHeadings[j] ] = $(cell).text().trim();
+          } else {
+            rowAsJson[j] = $(cell).text().trim();
+          }
+        });
+
+        if (JSON.stringify(rowAsJson) != '{}')
+          tableAsJson.push(rowAsJson);
+      });
+
+      if (tableAsJson.length != 0)
+        jsonResponse.push(tableAsJson);
+    });
+    return jsonResponse[0];
+  }
+
+const formatData = (allMenu) => {   
+    const fixedMenu = Object.values(allMenu)
     // segunda feira -- feito
-    const carneSegunda = allMenu.find(({ x, y }) => Math.round(x) == 182 && Math.round(y) == 144)?.str?.replace(':','')
-    const complementoSegunda = allMenu.find(({ x, y }) => Math.round(x) == 220 && Math.round(y) == 168)?.str
-    const salada1Segunda = allMenu.find(({ x, y }) => Math.round(x) == 194 && Math.round(y) == 180)?.str
-    const salada2Segunda = allMenu.find(({ x, y }) => Math.round(x) == 194 && Math.round(y) == 193)?.str
-    const sobremesaSegunda = allMenu.find(({ x, y }) => Math.round(x) == 205 && Math.round(y) == 205)?.str
-    const molhoSegunda = allMenu.find(({ x, y }) => Math.round(x) == 451 && Math.round(y) == 205)?.str
+    const carneSegunda = fixedMenu[2][2] ?? undefined
+    const complementoSegunda = fixedMenu[3][2] ?? undefined
+    const salada1Segunda = fixedMenu[4][2] ?? undefined
+    const salada2Segunda = fixedMenu[4][3] ?? undefined
+    const sobremesaSegunda = fixedMenu[5][2] ?? undefined
+    const molhoSegunda = fixedMenu[5][1] ?? undefined
 
     // terca feira -- feito
-    const carneTerca = allMenu.find(({ x, y }) => Math.round(x) == 182 && Math.round(y) == 217)?.str?.replace(':','')
-    const complementoTerca = allMenu.find(({ x, y }) => Math.round(x) == 220 && Math.round(y) == 242)?.str
-    const salada1Terca = allMenu.find(({ x, y }) => Math.round(x) == 194 && Math.round(y) == 254)?.str
-    const salada2Terca = allMenu.find(({ x, y }) => Math.round(x) == 194 && Math.round(y) == 266)?.str
-    const sobremesaTerca = allMenu.find(({ x, y }) => Math.round(x) == 205 && Math.round(y) == 278)?.str
-    const molhoTerca = allMenu.find(({ x, y }) => Math.round(x) == 454 && Math.round(y) == 278)?.str
+    const carneTerca = fixedMenu[7][2] ?? undefined
+    const complementoTerca = fixedMenu[8][2] ?? undefined
+    const salada1Terca = fixedMenu[9][2] ?? undefined
+    const salada2Terca = fixedMenu[9][3] ?? undefined
+    const sobremesaTerca = fixedMenu[10][2] ?? undefined
+    const molhoTerca = fixedMenu[10][1] ?? undefined
 
     // quarta feira -- feito
-    const carneQuarta = allMenu.find(({ x, y }) => Math.round(x) == 182 && Math.round(y) == 291)?.str?.replace(':','')
-    const complementoQuarta = allMenu.find(({ x, y }) => Math.round(x) == 220 && Math.round(y) == 315)?.str
-    const salada1Quarta = allMenu.find(({ x, y }) => Math.round(x) == 194 && Math.round(y) == 327)?.str
-    const salada2Quarta = allMenu.find(({ x, y }) => Math.round(x) == 194 && Math.round(y) == 340)?.str
-    const sobremesaQuarta = allMenu.find(({ x, y }) => Math.round(x) == 205 && Math.round(y) == 352)?.str
-    const molhoQuarta = allMenu.find(({ x, y }) => Math.round(x) == 460 && Math.round(y) == 352)?.str
+    const carneQuarta = fixedMenu[12][2] ?? undefined
+    const complementoQuarta = fixedMenu[14][2] ?? undefined
+    const salada1Quarta = fixedMenu[16][2] ?? undefined
+    const salada2Quarta = fixedMenu[16][3] ?? undefined
+    const sobremesaQuarta = fixedMenu[17][2] ?? undefined
+    const molhoQuarta = fixedMenu[17][1] ?? undefined
 
     // quinta feira -- feito
-    const carneQuinta = allMenu.find(({ x, y }) => Math.round(x) == 177 && Math.round(y) == 364)?.str?.replace(':','')
-    const complementoQuinta = allMenu.find(({ x, y }) => Math.round(x) == 220 && Math.round(y) == 389)?.str
-    const salada1Quinta = allMenu.find(({ x, y }) => Math.round(x) == 194 && Math.round(y) == 401)?.str
-    const salada2Quinta = allMenu.find(({ x, y }) => Math.round(x) == 194 && Math.round(y) == 413)?.str
-    const sobremesaQuinta = allMenu.find(({ x, y }) => Math.round(x) == 205 && Math.round(y) == 425)?.str
-    const molhoQuinta = allMenu.find(({ x, y }) => Math.round(x) == 456 && Math.round(y) == 425)?.str
+    const carneQuinta = fixedMenu[19][2] ?? undefined
+    const complementoQuinta = fixedMenu[20][2] ?? undefined
+    const salada1Quinta = fixedMenu[21][2] ?? undefined
+    const salada2Quinta = fixedMenu[21][3] ?? undefined
+    const sobremesaQuinta = fixedMenu[22][2] ?? undefined
+    const molhoQuinta = fixedMenu[22][1] ?? undefined
 
     // sexta feira -- feito
-    const carneSexta = allMenu.find(({ x, y }) => Math.round(x) == 177 && Math.round(y) == 438)?.str?.replace(':','')
-    const complementoSexta = allMenu.find(({ x, y }) => Math.round(x) == 220 && Math.round(y) == 462)?.str
-    const salada1Sexta = allMenu.find(({ x, y }) => Math.round(x) == 194 && Math.round(y) == 474)?.str
-    const salada2Sexta = allMenu.find(({ x, y }) => Math.round(x) == 194 && Math.round(y) == 487)?.str
-    const sobremesaSexta = allMenu.find(({ x, y }) => Math.round(x) == 205 && Math.round(y) == 499)?.str
-    const molhoSexta = allMenu.find(({ x, y }) => Math.round(x) == 465 && Math.round(y) == 499)?.str
+    const carneSexta = fixedMenu[24][2] ?? undefined
+    const complementoSexta = fixedMenu[25][2] ?? undefined
+    const salada1Sexta = fixedMenu[26][2] ?? undefined
+    const salada2Sexta = fixedMenu[26][3] ?? undefined
+    const sobremesaSexta = fixedMenu[27][2] ?? undefined
+    const molhoSexta = fixedMenu[27][1] ?? undefined
 
     // sabado -- feito
-    const carneSabado = allMenu.find(({ x, y }) => Math.round(x) == 177 && Math.round(y) == 511)?.str?.replace(':','')
-    const complementoSabado = allMenu.find(({ x, y }) => Math.round(x) == 220 && Math.round(y) == 536)?.str
-    const salada1Sabado = allMenu.find(({ x, y }) => Math.round(x) == 194 && Math.round(y) == 548)?.str
-    const salada2Sabado = allMenu.find(({ x, y }) => Math.round(x) == 194 && Math.round(y) == 560)?.str
-    const sobremesaSabado = allMenu.find(({ x, y }) => Math.round(x) == 205 && Math.round(y) == 572)?.str
-    const molhoSabado = allMenu.find(({ x, y }) => Math.round(x) == 471 && Math.round(y) == 572)?.str
+    const carneSabado = fixedMenu[29][2] ?? undefined
+    const complementoSabado = fixedMenu[30][2] ?? undefined
+    const salada1Sabado = fixedMenu[31][2] ?? undefined
+    const salada2Sabado = fixedMenu[31][3] ?? undefined
+    const sobremesaSabado = fixedMenu[32][2] ?? undefined
+    const molhoSabado = fixedMenu[32][1] ?? undefined
 
     // domingo -- feito
-    const carneDomingo = allMenu.find(({ x, y }) => Math.round(x) == 177 && Math.round(y) == 585)?.str?.replace(':','')
-    const complementoDomingo = allMenu.find(({ x, y }) => Math.round(x) == 220 && Math.round(y) == 609)?.str
-    const salada1Domingo = allMenu.find(({ x, y }) => Math.round(x) == 194 && Math.round(y) == 621)?.str
-    const sobremesaDomingo = allMenu.find(({ x, y }) => Math.round(x) == 205 && Math.round(y) == 634)?.str
-    const molhoDomingo = allMenu.find(({ x, y }) => Math.round(x) == 476 && Math.round(y) == 634)?.str
+    const carneDomingo = fixedMenu[34][2] ?? undefined
+    const complementoDomingo = fixedMenu[35][2] ?? undefined
+    const salada1Domingo = fixedMenu[36][2] ?? undefined
+    const sobremesaDomingo = fixedMenu[37][2] ?? undefined
+    const molhoDomingo = fixedMenu[37][1] ?? undefined
 
-    const dataFinal = allMenu.find(({ x, y }) => Math.round(x) == 61 && Math.round(y) == 597)?.str
+    const lenght = fixedMenu[0][0].length
+    const dia = fixedMenu[0][0].substring(5, 7)
+    const mes = mesesDic[fixedMenu[0][0].substring(11, lenght - 8)]
+    const ano = fixedMenu[0][0].substring(lenght - 4, lenght)
+
+    const dataFinal = `${dia}/${mes}/${ano}`
 
     const menu = [
         {
             "carne": [carneSegunda],
-            "fixas": ["Arroz Branco", "Arroz integral", "Feijão preto"],
+            "fixas": ["Arroz Parbolizado", "Arroz integral", "Feijão"],
             "complemento": [complementoSegunda],
             "salada": [salada1Segunda, salada2Segunda],
             "sobremesa": [sobremesaSegunda],
@@ -104,7 +132,7 @@ const formatData = (allMenu) => {
         },
         {
             "carne": [carneTerca],
-            "fixas": ["Arroz Branco", "Arroz integral", "Feijão preto"],
+            "fixas": ["Arroz Parbolizado", "Arroz integral", "Feijão"],
             "complemento": [complementoTerca],
             "salada": [salada1Terca, salada2Terca],
             "sobremesa": [sobremesaTerca],
@@ -112,7 +140,7 @@ const formatData = (allMenu) => {
         },
         {
             "carne": [carneQuarta],
-            "fixas": ["Arroz Branco", "Arroz integral", "Feijão preto"],
+            "fixas": ["Arroz Parbolizado", "Arroz integral", "Feijão"],
             "complemento": [complementoQuarta],
             "salada": [salada1Quarta, salada2Quarta],
             "sobremesa": [sobremesaQuarta],
@@ -120,7 +148,7 @@ const formatData = (allMenu) => {
         },
         {
             "carne": [carneQuinta],
-            "fixas": ["Arroz Branco", "Arroz integral", "Feijão preto"],
+            "fixas": ["Arroz Parbolizado", "Arroz integral", "Feijão"],
             "complemento": [complementoQuinta],
             "salada": [salada1Quinta, salada2Quinta],
             "sobremesa": [sobremesaQuinta],
@@ -128,7 +156,7 @@ const formatData = (allMenu) => {
         },
         {
             "carne": [carneSexta],
-            "fixas": ["Arroz Branco", "Arroz integral", "Feijão preto"],
+            "fixas": ["Arroz Parbolizado", "Arroz integral", "Feijão"],
             "complemento": [complementoSexta],
             "salada": [salada1Sexta, salada2Sexta],
             "sobremesa": [sobremesaSexta],
@@ -136,7 +164,7 @@ const formatData = (allMenu) => {
         },
         {
             "carne": [carneSabado],
-            "fixas": ["Arroz Branco", "Arroz integral", "Feijão preto"],
+            "fixas": ["Arroz Parbolizado", "Arroz integral", "Feijão"],
             "complemento": [complementoSabado],
             "salada": [salada1Sabado, salada2Sabado],
             "sobremesa": [sobremesaSabado],
@@ -144,7 +172,7 @@ const formatData = (allMenu) => {
         },
         {
             "carne": [carneDomingo],
-            "fixas": ["Arroz Branco", "Arroz integral", "Feijão preto"],
+            "fixas": ["Arroz Parbolizado", "Arroz integral", "Feijão"],
             "complemento": [complementoDomingo],
             "salada": [salada1Domingo],
             "sobremesa": [sobremesaDomingo],
@@ -153,33 +181,20 @@ const formatData = (allMenu) => {
     ]
 
     return {
-        "dataFinal": dataFinal?.replace(/\s/g, ''),
+        "dataFinal": dataFinal,
         "cardapio": menu
     }
 }
 
-const getMenuUrl = (html) => {
-    var $ = CheerioModule.load(html);
-    let url = ''
-  
-    $('a').each( (index, value) => {
-      var link = $(value).attr('href');
-      if (link?.includes('.pdf') && link?.includes('siteru')) {
-        url = link
-      }
-   });
-
-   return url.replace('http', 'https')
-}
 
 const start = async () => {
-    const url = await axios.get('https://ru.ufsc.br/ru/')
+    const data = await axios.get('https://ru.ufsc.br/ru/')
       .then((res) => {
-        return getMenuUrl(res?.data)
+        const convertedResponse = convert(res?.data)
+        const cardapio = formatData(convertedResponse)
+        return cardapio
     })
-
-    const allItems = await readData(url)
-    return formatData(allItems)
+    return data
 }
 
 app.get('/cardapio-floripa', async (req, res) => {
