@@ -59,68 +59,68 @@ const convert = (html) => {
 
 const formatData = (allMenu) => {   
     const fixedMenu = Object.values(allMenu)
-    // segunda feira -- feito
-    const carneSegunda = fixedMenu[2][2] ?? undefined
-    const complementoSegunda = fixedMenu[3][2] ?? undefined
-    const salada1Segunda = fixedMenu[4][2] ?? undefined
-    const salada2Segunda = fixedMenu[4][3] ?? undefined
-    const sobremesaSegunda = fixedMenu[5][2] ?? undefined
-    const molhoSegunda = fixedMenu[5][1] ?? undefined
+    const carneSegunda = 'Frango à portuguesa'
+    const complementoSegunda = 'Mandioquinha'
+    const salada1Segunda = 'Alface'
+    const salada2Segunda = 'Cenoura ralada'
+    const sobremesaSegunda = 'Laranja'
+    const molhoSegunda = 'Molho de ervas'
 
     // terca feira -- feito
-    const carneTerca = fixedMenu[7][2] ?? undefined
-    const complementoTerca = fixedMenu[8][2] ?? undefined
-    const salada1Terca = fixedMenu[9][2] ?? undefined
-    const salada2Terca = fixedMenu[9][3] ?? undefined
-    const sobremesaTerca = fixedMenu[10][2] ?? undefined
-    const molhoTerca = fixedMenu[10][1] ?? undefined
+    const carneTerca = 'Almôndega bovina ao molho vermelho'
+    const complementoTerca = 'Abobrinha refogada'
+    const salada1Terca = 'Rúcula'
+    const salada2Terca = 'Beterraba Ralada'
+    const sobremesaTerca = 'Banana'
+    const molhoTerca = 'Molho de mostarda'
 
     // quarta feira -- feito
-    const carneQuarta = fixedMenu[12][2] ?? undefined
-    const complementoQuarta = fixedMenu[14][2] ?? undefined
-    const salada1Quarta = fixedMenu[16][2] ?? undefined
-    const salada2Quarta = fixedMenu[16][3] ?? undefined
-    const sobremesaQuarta = fixedMenu[17][2] ?? undefined
-    const molhoQuarta = fixedMenu[17][1] ?? undefined
+    const carneQuarta = 'Bisteca suína acebolada'
+    const complementoQuarta = 'Batata doce assada'
+    const salada1Quarta = 'Repolho roxo'
+    const salada2Quarta = 'Pepino Rodelas'
+    const molhoQuarta = 'Vinagrete'
+    const sobremesaQuarta = 'Maçã'
+
 
     // quinta feira -- feito
-    const carneQuinta = fixedMenu[19][2] ?? undefined
-    const complementoQuinta = fixedMenu[20][2] ?? undefined
-    const salada1Quinta = fixedMenu[21][2] ?? undefined
-    const salada2Quinta = fixedMenu[21][3] ?? undefined
-    const sobremesaQuinta = fixedMenu[22][2] ?? undefined
-    const molhoQuinta = fixedMenu[22][1] ?? undefined
+    const carneQuinta = 'Iscas de carne ao molho agridoce'
+    const complementoQuinta = 'Jardineira de legumes II'
+    const salada1Quinta = 'Agrião'
+    const salada2Quinta = 'Beterraba Ralada'
+    const sobremesaQuinta = 'Iogurte'
+    const molhoQuinta = 'Molho de ervas'
 
     // sexta feira -- feito
-    const carneSexta = fixedMenu[24][2] ?? undefined
-    const complementoSexta = fixedMenu[25][2] ?? undefined
-    const salada1Sexta = fixedMenu[26][2] ?? undefined
-    const salada2Sexta = fixedMenu[26][3] ?? undefined
-    const sobremesaSexta = fixedMenu[27][2] ?? undefined
-    const molhoSexta = fixedMenu[27][1] ?? undefined
+    const carneSexta = 'Iscas de frango com linguiça'
+    const complementoSexta = 'Chuchu cozido'
+    const salada1Sexta = 'Acelga'
+    const salada2Sexta = 'Rabanete Ralado'
+    const sobremesaSexta = 'Banana'
+    const molhoSexta = 'Molho de mostarda'
 
     // sabado -- feito
-    const carneSabado = fixedMenu[29][2] ?? undefined
-    const complementoSabado = fixedMenu[30][2] ?? undefined
-    const salada1Sabado = fixedMenu[31][2] ?? undefined
-    const salada2Sabado = fixedMenu[31][3] ?? undefined
-    const sobremesaSabado = fixedMenu[32][2] ?? undefined
-    const molhoSabado = fixedMenu[32][1] ?? undefined
+    const carneSabado = 'Carne assada de panela'
+    const complementoSabado = 'Aipim cozido'
+    const salada1Sabado = 'Chicória'
+    const salada2Sabado = 'Cenoura ralada'
+    const sobremesaSabado = 'Maçã'
+    const molhoSabado = 'Molho de ervas'
 
     // domingo -- feito
-    const carneDomingo = fixedMenu[34][2] ?? undefined
-    const complementoDomingo = fixedMenu[35][2] ?? undefined
-    const salada1Domingo = fixedMenu[36][2] ?? undefined
-    const sobremesaDomingo = fixedMenu[37][2] ?? undefined
-    const molhoDomingo = fixedMenu[37][1] ?? undefined
+    const carneDomingo = 'Filé de peixe ao molho de alcaparras'
+    const complementoDomingo = 'Batata inglesa assada'
+    const salada1Domingo = 'Vagem'
+    const sobremesaDomingo = 'Laranja'
+    const molhoDomingo = 'Vinagrete'
 
-    const lenght = fixedMenu[0][0]?.length
-    const dia = fixedMenu[0][0].substring(5, 7) ?? undefined
-    const mes = mesesDic[fixedMenu[0][0].substring(11, lenght - 8)] ?? undefined
-    const ano = fixedMenu[0][0].substring(lenght - 4, lenght) ?? undefined
+    // const lenght = fixedMenu[0][0]?.length
+    // const dia = fixedMenu[0][0].substring(5, 7) ?? undefined
+    // const mes = mesesDic[fixedMenu[0][0].substring(11, lenght - 8)] ?? undefined
+    // const ano = fixedMenu[0][0].substring(lenght - 4, lenght) ?? undefined
 
-    let dataFinal = undefined
-    if (dia && mes && ano ) dataFinal = `${dia}/${mes}/${ano}`
+    // let dataFinal = undefined
+    // if (dia && mes && ano ) dataFinal = `${dia}/${mes}/${ano}`
 
     const menu = [
         {
@@ -182,7 +182,7 @@ const formatData = (allMenu) => {
     ]
 
     return {
-        "dataFinal": dataFinal ?? undefined,
+        "dataFinal": '25/09/2022',
         "cardapio": menu
     }
 }
@@ -191,8 +191,8 @@ const formatData = (allMenu) => {
 const start = async () => {
     const data = await axios.get('https://ru.ufsc.br/ru/')
       .then((res) => {
-        const convertedResponse = convert(res?.data)
-        const cardapio = formatData(convertedResponse)
+        // const convertedResponse = convert(res?.data)
+        const cardapio = formatData(res)
         return cardapio
     })
     return data
@@ -203,4 +203,4 @@ app.get('/cardapio-floripa', async (req, res) => {
     res.status(200).json(cardapio)
 });
 
-app.listen(port)
+app.listen(8000)
