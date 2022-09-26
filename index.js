@@ -59,60 +59,60 @@ const convert = (html) => {
 
 const formatData = (allMenu) => {   
     const fixedMenu = Object.values(allMenu)
-    const carneSegunda = 'Frango à portuguesa'
-    const complementoSegunda = 'Mandioquinha'
-    const salada1Segunda = 'Alface'
+    const carneSegunda = 'Filé mignon suíno ao molho de mostarda'
+    const complementoSegunda = 'Couve-flor cozida'
+    const salada1Segunda = 'Rúcula'
     const salada2Segunda = 'Cenoura ralada'
     const sobremesaSegunda = 'Laranja'
     const molhoSegunda = 'Molho de ervas'
 
     // terca feira -- feito
-    const carneTerca = 'Almôndega bovina ao molho vermelho'
-    const complementoTerca = 'Abobrinha refogada'
+    const carneTerca = 'Carne moída'
+    const complementoTerca = 'Farofa simples'
     const salada1Terca = 'Rúcula'
     const salada2Terca = 'Beterraba Ralada'
     const sobremesaTerca = 'Banana'
     const molhoTerca = 'Molho de mostarda'
 
     // quarta feira -- feito
-    const carneQuarta = 'Bisteca suína acebolada'
-    const complementoQuarta = 'Batata doce assada'
-    const salada1Quarta = 'Repolho roxo'
-    const salada2Quarta = 'Pepino Rodelas'
-    const molhoQuarta = 'Vinagrete'
+    const carneQuarta = 'Sobrecoxa de frango'
+    const complementoQuarta = 'Ratatouile'
+    const salada1Quarta = 'Acelga'
+    const salada2Quarta = 'Rabanete Ralado'
+    const molhoQuarta = 'Molho de ervas'
     const sobremesaQuarta = 'Maçã'
 
 
     // quinta feira -- feito
-    const carneQuinta = 'Iscas de carne ao molho agridoce'
-    const complementoQuinta = 'Jardineira de legumes II'
-    const salada1Quinta = 'Agrião'
+    const carneQuinta = 'Filé de peixe empanado'
+    const complementoQuinta = 'Grão de bico com espinafre'
+    const salada1Quinta = 'Alface'
     const salada2Quinta = 'Beterraba Ralada'
-    const sobremesaQuinta = 'Iogurte'
-    const molhoQuinta = 'Molho de ervas'
+    const sobremesaQuinta = 'Laranja'
+    const molhoQuinta = 'Vinagrete'
 
     // sexta feira -- feito
-    const carneSexta = 'Iscas de frango com linguiça'
-    const complementoSexta = 'Chuchu cozido'
-    const salada1Sexta = 'Acelga'
-    const salada2Sexta = 'Rabanete Ralado'
+    const carneSexta = 'Estrogonofe de frango'
+    const complementoSexta = 'Batata Palha'
+    const salada1Sexta = 'Agrião'
+    const salada2Sexta = 'Pepino Rodelas'
     const sobremesaSexta = 'Banana'
-    const molhoSexta = 'Molho de mostarda'
+    const molhoSexta = 'Molho de ervas'
 
     // sabado -- feito
-    const carneSabado = 'Carne assada de panela'
-    const complementoSabado = 'Aipim cozido'
-    const salada1Sabado = 'Chicória'
+    const carneSabado = 'Feijoada vegetariana'
+    const complementoSabado = 'Farofa Simples'
+    const salada1Sabado = 'Couve folha'
     const salada2Sabado = 'Cenoura ralada'
-    const sobremesaSabado = 'Maçã'
-    const molhoSabado = 'Molho de ervas'
+    const sobremesaSabado = 'Laranja'
+    const molhoSabado = 'Vinagrete'
 
     // domingo -- feito
-    const carneDomingo = 'Filé de peixe ao molho de alcaparras'
-    const complementoDomingo = 'Batata inglesa assada'
-    const salada1Domingo = 'Vagem'
-    const sobremesaDomingo = 'Laranja'
-    const molhoDomingo = 'Vinagrete'
+    const carneDomingo = 'Omelete com tomate e ervilha'
+    const complementoDomingo = 'Yakissoba de legumes'
+    const salada1Domingo = 'Abobrinha Cozida'
+    const sobremesaDomingo = 'Maça'
+    const molhoDomingo = 'Molho de mostarda'
 
     // const lenght = fixedMenu[0][0]?.length
     // const dia = fixedMenu[0][0].substring(5, 7) ?? undefined
@@ -164,7 +164,7 @@ const formatData = (allMenu) => {
             "molho": [molhoSexta]
         },
         {
-            "carne": [carneSabado],
+            "carne": [carneSabado, 'Feijoada com carne'],
             "fixas": ["Arroz Parbolizado", "Arroz integral", "Feijão"],
             "complemento": [complementoSabado],
             "salada": [salada1Sabado, salada2Sabado],
