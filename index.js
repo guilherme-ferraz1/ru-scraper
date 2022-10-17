@@ -59,60 +59,60 @@ const convert = (html) => {
 
 const formatData = (allMenu) => {   
     const fixedMenu = Object.values(allMenu)
-    const carneSegunda = 'Bife acebolado'
-    const complementoSegunda = 'Abobrinha refogada'
-    const salada1Segunda = 'Agrião'
-    const salada2Segunda = 'Rabanete Ralado'
-    const sobremesaSegunda = 'Banana'
-    const molhoSegunda = 'Vinagrete'
+    const carneSegunda = 'Frango ao molho de mostarda'
+    const complementoSegunda = 'Brócolis cozido'
+    const salada1Segunda = 'Alface'
+    const salada2Segunda = 'Cenoura ralada'
+    const sobremesaSegunda = 'Laranja'
+    const molhoSegunda = 'Molho de ervas'
 
     // terca feira -- feito
-    const carneTerca = 'Sobrecoxa de frango com ervas'
-    const complementoTerca = 'Berinjela e cebola'
-    const salada1Terca = 'Couve Folha'
+    const carneTerca = 'Lombinho suíno à portuguesa'
+    const complementoTerca = 'Mandioquinha'
+    const salada1Terca = 'Agrião'
     const salada2Terca = 'Beterraba Ralada'
-    const sobremesaTerca = 'Maça'
+    const sobremesaTerca = 'Laranja'
     const molhoTerca = 'Molho de mostarda'
 
     // quarta feira -- feito
-    const carneQuarta = 'Estrogonofe de carne'
-    const complementoQuarta = 'Batata palha'
-    const salada1Quarta = 'Alface'
-    const salada2Quarta = 'Cenoura ralada'
-    const molhoQuarta = 'Molho de ervas'
-    const sobremesaQuarta = 'Bombom'
+    const carneQuarta = 'Carne moída com azeitonas'
+    const complementoQuarta = 'Farofa colorida'
+    const salada1Quarta = 'Chicória'
+    const salada2Quarta = 'Rabanete Ralado'
+    const molhoQuarta = 'Vinagrete'
+    const sobremesaQuarta = 'Banana'
 
 
     // quinta feira -- feito
-    const carneQuinta = 'Quibe'
-    const complementoQuinta = 'Lentilha refogada'
+    const carneQuinta = 'Frango ao molho vermelho'
+    const complementoQuinta = 'Jardineira de legumes I'
     const salada1Quinta = 'Rúcula'
-    const salada2Quinta = 'Beterraba Ralada'
-    const sobremesaQuinta = 'Laranja'
-    const molhoQuinta = 'Vinagrete'
+    const salada2Quinta = 'Pepino Rodelas'
+    const sobremesaQuinta = 'Iogurte'
+    const molhoQuinta = 'Molho de ervas'
 
     // sexta feira -- feito
-    const carneSexta = 'Frango com linguiça'
-    const complementoSexta = 'Batata doce ao forno'
-    const salada1Sexta = 'Chicória'
+    const carneSexta = 'Filé de peixe empanado'
+    const complementoSexta = 'Abóbora cozida'
+    const salada1Sexta = 'Espinafre'
     const salada2Sexta = 'Cenoura ralada'
-    const sobremesaSexta = 'Banana'
-    const molhoSexta = 'Molho de ervas'
+    const sobremesaSexta = 'Laranja'
+    const molhoSexta = 'Molho de mostarda'
 
     // sabado -- feito
-    const carneSabado = 'Filé de peixe à portuguesa'
-    const complementoSabado = 'Mandioquinha'
-    const salada1Sabado = 'Acelga'
-    const salada2Sabado = 'Rabanete Ralado'
-    const sobremesaSabado = 'Laranja'
+    const carneSabado = 'Não informado'
+    const complementoSabado = 'Vagem cozida'
+    const salada1Sabado = 'Repolho'
+    const salada2Sabado = 'Pepino Rodelas'
+    const sobremesaSabado = 'Maça'
     const molhoSabado = 'Vinagrete'
 
     // domingo -- feito
-    const carneDomingo = 'Risoto de Frango'
-    const complementoDomingo = 'Cenoura cozida'
-    const salada1Domingo = 'Vagem com cebola'
-    const sobremesaDomingo = 'Maça'
-    const molhoDomingo = 'Molho de mostarda'
+    const carneDomingo = 'Não informado'
+    const complementoDomingo = 'CNão informado'
+    const salada1Domingo = 'Chuchu cozido'
+    const sobremesaDomingo = 'Laranja'
+    const molhoDomingo = 'Molho de ervas'
 
     // const lenght = fixedMenu[0][0]?.length
     // const dia = fixedMenu[0][0].substring(5, 7) ?? undefined
