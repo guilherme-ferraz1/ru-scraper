@@ -88,10 +88,11 @@ const createItem = (menu) => {
   const item = e.split('\n')
   const filtered = item.filter((e) => !e.includes('jantar'))
   let itemObj = {}
+  const saladaItems = filtered[3].substring(9).split('/')
   itemObj.carne = [filtered[1].substring(7)]
   itemObj.fixas = ["Arroz Parbolizado", "Arroz integral", "Feijão"]
   itemObj.complemento = [filtered[2].substring(13)]
-  itemObj.salada = filtered[3].substring(9).split(' /')
+  itemObj.salada = saladaItems.map((e) => e.trim())
   itemObj.molho = [filtered[4]]
   itemObj.sobremesa = [filtered[5]]
   return itemObj
