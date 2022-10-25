@@ -93,8 +93,8 @@ const createItem = (menu) => {
   itemObj.fixas = ["Arroz Parbolizado", "Arroz integral", "Feijão"]
   itemObj.complemento = [filtered[2].substring(13)]
   itemObj.salada = saladaItems.map((e) => e.trim())
-  itemObj.molho = [filtered[4]]
-  itemObj.sobremesa = [filtered[5]]
+  itemObj.molho = [filtered[5]]
+  itemObj.sobremesa = [filtered[4]]
   return itemObj
 }
 
