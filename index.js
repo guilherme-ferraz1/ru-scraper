@@ -77,6 +77,8 @@ const formatData = (data) => {
       createItem(data[7]),
     ]
 
+    console.log(menu)
+
     return {
       "dataFinal": dataFinal,
       "cardapio": menu
@@ -85,16 +87,16 @@ const formatData = (data) => {
 
 const createItem = (menu) => {
   const e = menu[1]
-  const item = e.split('\n')
-  const filtered = item.filter((e) => !e.includes('jantar'))
+  const item = e.split('\n')  
+  const filtered = item.filter((e) => !e.includes('Carne (jantar)') || !e.includes('Complemento (jantar)') )
   let itemObj = {}
   const saladaItems = filtered[3].substring(9).split('/')
   itemObj.carne = [filtered[1].substring(7)]
   itemObj.fixas = ["Arroz Parbolizado", "Arroz integral", "Feijão"]
   itemObj.complemento = [filtered[2].substring(13)]
   itemObj.salada = saladaItems.map((e) => e.trim())
-  itemObj.molho = [filtered[5]]
-  itemObj.sobremesa = [filtered[4]]
+  itemObj.molho = [filtered[4]]
+  itemObj.sobremesa = [filtered[5]]
   return itemObj
 }
 
@@ -113,5 +115,7 @@ app.get('/cardapio-floripa', async (req, res) => {
     const cardapio = await start()
     res.status(200).json(cardapio)
 });
+
+start()
 
 app.listen(port)
