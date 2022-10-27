@@ -77,8 +77,6 @@ const formatData = (data) => {
       createItem(data[7]),
     ]
 
-    console.log(menu)
-
     return {
       "dataFinal": dataFinal,
       "cardapio": menu
@@ -115,7 +113,5 @@ app.get('/cardapio-floripa', async (req, res) => {
     const cardapio = await start()
     res.status(200).json(cardapio)
 });
-
-start()
 
 app.listen(port)
