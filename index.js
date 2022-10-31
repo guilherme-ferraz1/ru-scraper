@@ -77,33 +77,93 @@ const formatData = (data) => {
       createItem(data[7]),
     ]
 
+    const MENU_TEMPORARY = [
+      {
+        carne: [" Iscas de frango acebolada", "Quibe (jantar)"],
+        fixas: ["Arroz Parbolizado", "Arroz integral", "Feijão"],
+        complemento: ["Abóbora cozida"],
+        salada: ["Couve folha", "Pepino"],
+        molho: ["Molho de Mostarda"],
+        sobremesa: ["Não informado"]
+      },
+      {
+        carne: ["Frango ao Molho de mostarda"],
+        fixas: ["Arroz Parbolizado", "Arroz integral", "Feijão"],
+        complemento: ["Batata doce"],
+        salada: ["Chicória", "Beterraba"],
+        molho: ["Molho de Ervas"],
+        sobremesa: ["Laranja"]
+      },
+      {
+        carne: ["Bife acebolado"],
+        fixas: ["Arroz Parbolizado", "Arroz integral", "Feijão"],
+        complemento: ["Macarrão integral primavera"],
+        salada: ["Alface", "Cenoura"],
+        molho: ["Vinagrete"],
+        sobremesa: ["Banana"]
+      },
+      {
+        carne: ["Filé mignon suíno ao molho agridoce"],
+        fixas: ["Arroz Parbolizado", "Arroz integral", "Feijão"],
+        complemento: ["Jardineira de legumes I"],
+        salada: ["Acelga", "Beterraba"],
+        molho: ["Molho de Mostarda"],
+        sobremesa: ["Laranja"]
+      },
+      {
+        carne: ["Calulu de carne seca", "Almôndega bovina (jantar)"],
+        fixas: ["Arroz Parbolizado", "Arroz integral", "Feijão"],
+        complemento: ["Cuscuz", "Polenta (jantar)"],
+        salada: ["Agrião", "Rabanete"],
+        molho: ["Molho de Ervas"],
+        sobremesa: ["Banana"]
+      },
+      {
+        carne: ["Linguiça toscana"],
+        fixas: ["Arroz Parbolizado", "Arroz integral", "Feijão"],
+        complemento: ["Maionese de batatas"],
+        salada: ["Repolho", "Pepino"],
+        molho: ["Vinagrete"],
+        sobremesa: ["Laranja"]
+      },
+      {
+        carne: ["Frango Xadrez"],
+        fixas: ["Arroz Parbolizado", "Arroz integral", "Feijão"],
+        complemento: ["Macarrão integral ao Alho e Óleo"],
+        salada: ["Vagem com cebola"],
+        molho: ["Molho de Ervas"],
+        molho: ["Maça"],
+      }
+    ]
+
     return {
-      "dataFinal": dataFinal,
-      "cardapio": menu
+      "dataFinal": date,
+      "cardapio": MENU_TEMPORARY
     }
 }
 
 const createItem = (menu) => {
   const e = menu[1]
-  const item = e.split('\n')  
+  const item = e.split('\n')
+  const teste = item.map((i) => i.split('MOLHO')[0].trim())
   const filtered = item.filter((e) => !e.includes('Carne (jantar)') || !e.includes('Complemento (jantar)') )
   let itemObj = {}
   const saladaItems = filtered[3].substring(9).split('/')
-  itemObj.carne = [filtered[1].substring(7)]
+  itemObj.carne = [filtered[0].substring(7)]
   itemObj.fixas = ["Arroz Parbolizado", "Arroz integral", "Feijão"]
   itemObj.complemento = [filtered[2].substring(13)]
-  itemObj.salada = saladaItems.map((e) => e.trim())
-  itemObj.molho = [filtered[5]]
-  itemObj.sobremesa = [filtered[4]]
+  itemObj.salada = [filtered[3].substring(10), filtered[4].substring(9)]
+  itemObj.molho = [filtered[5].substring(10, 18)]
+  itemObj.sobremesa = [filtered[6] ?? 'Não informado']
   return itemObj
 }
-
 
 const start = async () => {
     const data = await axios.get('https://ru.ufsc.br/ru/')
       .then((res) => {
         const convertedResponse = convert(res?.data)
         const cardapio = formatData(convertedResponse)
+        console.log(cardapio)
         return cardapio
     })
     return data
