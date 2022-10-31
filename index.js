@@ -163,7 +163,6 @@ const start = async () => {
       .then((res) => {
         const convertedResponse = convert(res?.data)
         const cardapio = formatData(convertedResponse)
-        console.log(cardapio)
         return cardapio
     })
     return data
