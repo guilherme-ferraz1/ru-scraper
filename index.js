@@ -67,94 +67,179 @@ const formatData = (data) => {
     let dataFinal = undefined
     if (dia && mes && ano ) dataFinal = `${dia}/${mes}/${ano}`
 
-    const menu = [
-      createItem(data[1]),
-      createItem(data[2]),
-      createItem(data[3]),
-      createItem(data[4]),
-      createItem(data[5]),
-      createItem(data[6]),
-      createItem(data[7]),
-    ]
+    // const menu = [
+    //   createItem(data[1]),
+    //   createItem(data[2]),
+    //   createItem(data[3]),
+    //   createItem(data[4]),
+    //   createItem(data[5]),
+    //   createItem(data[6]),
+    //   createItem(data[7]),
+    // ]
 
     const MENU_TEMPORARY = [
       {
-        carne: [" Iscas de frango acebolada", "Quibe (jantar)"],
+        carne: ["Carne moída com ervilha", "Almôndega bovina (jantar)"],
+        fixas: ["Arroz Parbolizado", "Arroz integral", "Feijão"],
+        complemento: ["Farofa com azeitonas, Polenta simples (jantar)"],
+        salada: ["Repolho roxo", "Pepino Rodelas"],
+        molho: ["Molho de Mostarda"],
+        sobremesa: ["Laranja"]
+      },
+      {
+        carne: ["Frango ao molho curry"],
+        fixas: ["Arroz Parbolizado", "Arroz integral", "Feijão"],
+        complemento: ["Brócolis cozido"],
+        salada: ["Alface", "Beterraba Ralada"],
+        molho: ["Vinagrete"],
+        sobremesa: ["Maçã"]
+      },
+      {
+        carne: ["Bisteca suína ao molho agridoce"],
+        fixas: ["Arroz Parbolizado", "Arroz integral", "Feijão"],
+        complemento: ["Lentilha com legumes"],
+        salada: ["Acelga", "Cenoura ralada"],
+        molho: ["Molho de ervas"],
+        sobremesa: ["Iogurte"]
+      },
+      {
+        carne: ["FCalulu de carne seca"],
+        fixas: ["Arroz Parbolizado", "Arroz integral", "Feijão"],
+        complemento: ["Cuscuz", "Ratatouille (jantar)"],
+        salada: ["Agrião", "Beterraba Ralada"],
+        molho: ["Vinagrete"],
+        sobremesa: ["Laranja"]
+      },
+      {
+        carne: ["Frango ao molho vermelho"],
+        fixas: ["Arroz Parbolizado", "Arroz integral", "Feijão"],
+        complemento: ["Batata cozida com alecrim"],
+        salada: ["Rúcula", "Pepino Rodelas"],
+        molho: ["Molho de Ervas"],
+        sobremesa: ["Cocada"]
+      },
+      {
+        carne: ["Omelete de espinafre e cenoura"],
         fixas: ["Arroz Parbolizado", "Arroz integral", "Feijão"],
         complemento: ["Abóbora cozida"],
-        salada: ["Couve folha", "Pepino"],
-        molho: ["Molho de Mostarda"],
-        sobremesa: ["Não informado"]
-      },
-      {
-        carne: ["Frango ao Molho de mostarda"],
-        fixas: ["Arroz Parbolizado", "Arroz integral", "Feijão"],
-        complemento: ["Batata doce"],
-        salada: ["Chicória", "Beterraba"],
-        molho: ["Molho de Ervas"],
+        salada: ["Chicória", "Rabanete Rodelas"],
+        molho: ["Molho de mostarda"],
         sobremesa: ["Laranja"]
       },
       {
-        carne: ["Bife acebolado"],
+        carne: ["Estrogonofe de carne"],
         fixas: ["Arroz Parbolizado", "Arroz integral", "Feijão"],
-        complemento: ["Macarrão integral primavera"],
-        salada: ["Alface", "Cenoura"],
-        molho: ["Vinagrete"],
-        sobremesa: ["Banana"]
-      },
-      {
-        carne: ["Filé mignon suíno ao molho agridoce"],
-        fixas: ["Arroz Parbolizado", "Arroz integral", "Feijão"],
-        complemento: ["Jardineira de legumes I"],
-        salada: ["Acelga", "Beterraba"],
-        molho: ["Molho de Mostarda"],
-        sobremesa: ["Laranja"]
-      },
-      {
-        carne: ["Calulu de carne seca", "Almôndega bovina (jantar)"],
-        fixas: ["Arroz Parbolizado", "Arroz integral", "Feijão"],
-        complemento: ["Cuscuz", "Polenta (jantar)"],
-        salada: ["Agrião", "Rabanete"],
-        molho: ["Molho de Ervas"],
-        sobremesa: ["Banana"]
-      },
-      {
-        carne: ["Linguiça toscana"],
-        fixas: ["Arroz Parbolizado", "Arroz integral", "Feijão"],
-        complemento: ["Maionese de batatas"],
-        salada: ["Repolho", "Pepino"],
-        molho: ["Vinagrete"],
-        sobremesa: ["Laranja"]
-      },
-      {
-        carne: ["Frango Xadrez"],
-        fixas: ["Arroz Parbolizado", "Arroz integral", "Feijão"],
-        complemento: ["Macarrão integral ao Alho e Óleo"],
-        salada: ["Vagem com cebola"],
+        complemento: ["Batata palha"],
+        salada: ["Cenoura cozida"],
         molho: ["Molho de Ervas"],
         molho: ["Maça"],
       }
     ]
 
     return {
-      "dataFinal": date,
+      "dataFinal": '13/11/2022',
       "cardapio": MENU_TEMPORARY
     }
+}
+
+const getCarnes = (string) => {
+  let arr = []
+  let newStr = string.toUpperCase()
+
+  if (string.toUpperCase().includes('CARNE JANTAR')) {
+    arr.push(string.substring(newStr.indexOf('CARNE JANTAR') + 13, newStr.indexOf(('COMPLEMENTO'))))
+    arr.push(string.substring(newStr.indexOf('CARNE ALMOÇO') + 13, newStr.indexOf(('CARNE JANTAR'))))
+    return arr
+  }
+
+  if (string.toUpperCase().includes('CARNE (JANTAR)')) {
+    arr.push(string.substring(newStr.indexOf('CARNE (JANTAR)') + 15, newStr.indexOf('COMPLEMENTO')))
+    arr.push(string.substring(newStr.indexOf('CARNE (ALMOÇO)') + 15, newStr.indexOf(('CARNE (ALMOÇO)'))))
+    return arr
+  }
+
+  arr.push(string.substring(newStr.indexOf('CARNE') + 6, newStr.indexOf(('COMPLEMENTO'))))
+  return arr
+}
+
+const getComplementos = (string) => {
+  let arr = []
+  let newStr = string.toUpperCase()
+
+  if (string.toUpperCase().includes('COMPLEMENTO JANTAR')) {
+    arr.push(string.substring(newStr.indexOf('COMPLEMENTO JANTAR') + 19, newStr.indexOf(('SALADA'))))
+    arr.push(string.substring(newStr.indexOf('COMPLEMENTO ALMOÇO') + 19, newStr.indexOf(('COMPLEMENTO JANTAR'))))
+    return arr
+  }
+
+  if (string.toUpperCase().includes('COMPLEMENTO (JANTAR)')) {
+    arr.push(string.substring(newStr.indexOf('COMPLEMENTO (JANTAR)') + 21, newStr.indexOf('SALADA')))
+    arr.push(string.substring(newStr.indexOf('COMPLEMENTO (ALMOÇO)') + 21, newStr.indexOf(('COMPLEMENTO (ALMOÇO)'))))
+    return arr
+  }
+
+  arr.push(string.substring(newStr.indexOf('COMPLEMENTO') + 12, newStr.indexOf(('SALADA'))))
+  return arr
+}
+
+const getSalada = (string) => {
+  let arr = []
+  let newStr = string.toUpperCase()
+
+  if (string.toUpperCase().includes('SALADA 2')) {
+    arr.push(string.substring(newStr.indexOf('SALADA 1') + 9, newStr.indexOf(('SALADA 2'))))
+    if (newStr.includes(('SOBREMESA'))) {
+      arr.push(string.substring(newStr.indexOf('SALADA 2') + 9, newStr.indexOf(('SOBREMESA'))))
+    } else {
+      arr.push(string.substring(newStr.indexOf('SALADA 2') + 9, newStr.indexOf(('MOLHO'))))
+    }
+    return arr
+  }
+
+  arr.push(string.substring(newStr.indexOf('SALADA 1') + 9, newStr.indexOf(('SOBREMESA'))))
+  return arr
+}
+
+const getSobremesa = (string) => {
+  let arr = []
+  let newStr = string.toUpperCase()
+
+  if (string.toUpperCase().includes('SOBREMESA')) {
+    arr.push(string.substring(newStr.indexOf('SOBREMESA') + 10, newStr.indexOf(('MOLHO SALADA'))))
+  }
+
+  return arr
+}
+
+const getMolho = (string) => {
+  let arr = []
+  let newStr = string.toUpperCase()
+
+  if (string.toUpperCase().includes('MOLHO SALADA')) {
+    arr.push(string.substring(newStr.indexOf('MOLHO SALADA') + 13))
+  }
+
+  return arr
 }
 
 const createItem = (menu) => {
   const e = menu[1]
   const item = e.split('\n')
-  const teste = item.map((i) => i.split('MOLHO')[0].trim())
-  const filtered = item.filter((e) => !e.includes('Carne (jantar)') || !e.includes('Complemento (jantar)') )
+  const arr = item
+    .map((i) => i.split(/\s+/))
+  delete arr[1]
+  const bigArr = [].concat(...arr)
+  const cleaned = bigArr.filter((item) => item !== undefined)
+  const replaced = cleaned.map((i) => i.replace(/[!@#$%:^&*]/g, ""))
+  const bigString = replaced.join(' ')
+  
   let itemObj = {}
-  const saladaItems = filtered[3].substring(9).split('/')
-  itemObj.carne = [filtered[0].substring(7)]
+  itemObj.carne = getCarnes(bigString)
   itemObj.fixas = ["Arroz Parbolizado", "Arroz integral", "Feijão"]
-  itemObj.complemento = [filtered[2].substring(13)]
-  itemObj.salada = [filtered[3].substring(10), filtered[4].substring(9)]
-  itemObj.molho = [filtered[5].substring(10, 18)]
-  itemObj.sobremesa = [filtered[6] ?? 'Não informado']
+  itemObj.complemento = getComplementos(bigString)
+  itemObj.salada = getSalada(bigString)
+  itemObj.molho = getMolho(bigString)
+  itemObj.sobremesa = getSobremesa(bigString)
   return itemObj
 }
 
