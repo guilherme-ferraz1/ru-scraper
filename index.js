@@ -95,44 +95,44 @@ const formatData = (data) => {
         sobremesa: ["Maçã"]
       },
       {
-        carne: ["Bisteca suína ao molho agridoce"],
+        carne: ["Filé mignon suíno ao molho de mostarda"],
         fixas: ["Arroz Parbolizado", "Arroz integral", "Feijão"],
-        complemento: ["Lentilha com legumes"],
-        salada: ["Acelga", "Cenoura ralada"],
-        molho: ["Molho de ervas"],
-        sobremesa: ["Iogurte"]
-      },
-      {
-        carne: ["FCalulu de carne seca"],
-        fixas: ["Arroz Parbolizado", "Arroz integral", "Feijão"],
-        complemento: ["Cuscuz", "Ratatouille (jantar)"],
-        salada: ["Agrião", "Beterraba Ralada"],
-        molho: ["Vinagrete"],
-        sobremesa: ["Laranja"]
-      },
-      {
-        carne: ["Frango ao molho vermelho"],
-        fixas: ["Arroz Parbolizado", "Arroz integral", "Feijão"],
-        complemento: ["Batata cozida com alecrim"],
-        salada: ["Rúcula", "Pepino Rodelas"],
-        molho: ["Molho de Ervas"],
-        sobremesa: ["Cocada"]
-      },
-      {
-        carne: ["Omelete de espinafre e cenoura"],
-        fixas: ["Arroz Parbolizado", "Arroz integral", "Feijão"],
-        complemento: ["Abóbora cozida"],
-        salada: ["Chicória", "Rabanete Rodelas"],
+        complemento: ["Abobrinha ao forno"],
+        salada: ["Repolho", "Cenoura ralada"],
         molho: ["Molho de mostarda"],
         sobremesa: ["Laranja"]
       },
       {
-        carne: ["Estrogonofe de carne"],
+        carne: ["Sobrecoxa de frango"],
         fixas: ["Arroz Parbolizado", "Arroz integral", "Feijão"],
-        complemento: ["Batata palha"],
-        salada: ["Cenoura cozida"],
-        molho: ["Molho de Ervas"],
-        molho: ["Maça"],
+        complemento: ["Grão de bico com legumes"],
+        salada: ["Rúcula", "Beterraba Ralada"],
+        molho: ["Molho de ervas"],
+        sobremesa: ["Maça"]
+      },
+      {
+        carne: ["Mungunzá", "Quibe (jantar)"],
+        fixas: ["Arroz Parbolizado", "Arroz integral", "Feijão"],
+        complemento: ["Farofa simples", "Macarrão integral ao alho e óleo (jantar)"],
+        salada: ["Espinafre", "Cenoura ralada"],
+        molho: ["Vinagrete"],
+        sobremesa: ["Banana"]
+      },
+      {
+        carne: ["Feijoada", "Feijoada vegetariana"],
+        fixas: ["Arroz Parbolizado", "Arroz integral", "Feijão"],
+        complemento: ["Farofa simples"],
+        salada: ["Pepino Rodelas", "Couve Folha"],
+        molho: ["Molho de ervas"],
+        sobremesa: ["Laranja"]
+      },
+      {
+        carne: ["Risoto de Frango"],
+        fixas: ["Arroz Parbolizado", "Arroz integral", "Feijão"],
+        complemento: ["Abóbora cozida"],
+        salada: ["Chuchu cozido"],
+        molho: ["Vinagrete"],
+        molho: ["Abacaxi"],
       }
     ]
 
