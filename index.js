@@ -58,14 +58,14 @@ const convert = (html) => {
   }
 
 const formatData = (data) => { 
-   const date = data[7][0].split(`\n`)[1]
+  //  const date = data[7][0].split(`\n`)[1]
     
-    const dia = date.substring(0, 2)
-    const mes = mesesDic[date.substring(3, 6)]
-    const ano =  date.substring(7, 9)
+    // const dia = date.substring(0, 2)
+    // const mes = mesesDic[date.substring(3, 6)]
+    // const ano =  date.substring(7, 9)
 
-    let dataFinal = undefined
-    if (dia && mes && ano ) dataFinal = `${dia}/${mes}/${ano}`
+    // let dataFinal = undefined
+    // if (dia && mes && ano ) dataFinal = `${dia}/${mes}/${ano}`
 
     // const menu = [
     //   createItem(data[1]),
@@ -137,7 +137,7 @@ const formatData = (data) => {
     ]
 
     return {
-      "dataFinal": '13/11/2022',
+      "dataFinal": '20/11/2022',
       "cardapio": MENU_TEMPORARY
     }
 }
