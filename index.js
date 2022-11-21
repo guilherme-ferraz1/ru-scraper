@@ -77,67 +77,69 @@ const formatData = (data) => {
     //   createItem(data[7]),
     // ]
 
+    const fixas = ["Arroz Parbolizado", "Arroz integral", "Feijão"]
+
     const MENU_TEMPORARY = [
       {
-        carne: ["Carne moída com ervilha", "Almôndega bovina (jantar)"],
-        fixas: ["Arroz Parbolizado", "Arroz integral", "Feijão"],
-        complemento: ["Farofa com azeitonas, Polenta simples (jantar)"],
-        salada: ["Repolho roxo", "Pepino Rodelas"],
-        molho: ["Molho de Mostarda"],
-        sobremesa: ["Laranja"]
-      },
-      {
-        carne: ["Frango ao molho curry"],
-        fixas: ["Arroz Parbolizado", "Arroz integral", "Feijão"],
-        complemento: ["Brócolis cozido"],
-        salada: ["Alface", "Beterraba Ralada"],
+        carne: ["Bisteca suína acebolada"],
+        fixas: fixas,
+        complemento: ["Polenta simples"],
+        salada: ["Couve Folha", "Cenoura ralada"],
         molho: ["Vinagrete"],
         sobremesa: ["Maçã"]
       },
       {
-        carne: ["Filé mignon suíno ao molho de mostarda"],
-        fixas: ["Arroz Parbolizado", "Arroz integral", "Feijão"],
-        complemento: ["Abobrinha ao forno"],
-        salada: ["Repolho", "Cenoura ralada"],
+        carne: ["Frango com linguiça"],
+        fixas: fixas,
+        complemento: ["Chuchu cozido"],
+        salada: ["Chicória", "Beterraba Ralada"],
         molho: ["Molho de mostarda"],
         sobremesa: ["Laranja"]
       },
       {
-        carne: ["Sobrecoxa de frango"],
-        fixas: ["Arroz Parbolizado", "Arroz integral", "Feijão"],
-        complemento: ["Grão de bico com legumes"],
-        salada: ["Rúcula", "Beterraba Ralada"],
+        carne: ["Carne moída com seleta de legumes, Sassami de frango empanado (jantar)"],
+        fixas: fixas,
+        complemento: ["Farofa com batata palha, Macarrão com ervas (jantar)"],
+        salada: ["Repolho roxo", "Pepino Rodelas"],
         molho: ["Molho de ervas"],
         sobremesa: ["Maça"]
       },
       {
-        carne: ["Mungunzá", "Quibe (jantar)"],
-        fixas: ["Arroz Parbolizado", "Arroz integral", "Feijão"],
-        complemento: ["Farofa simples", "Macarrão integral ao alho e óleo (jantar)"],
-        salada: ["Espinafre", "Cenoura ralada"],
-        molho: ["Vinagrete"],
+        carne: ["Frango à portuguesa"],
+        fixas: fixas,
+        complemento: ["Abóbora cozida"],
+        salada: ["Agrião", "Beterraba Ralada"],
+        molho: ["Molho de mostarda"],
         sobremesa: ["Banana"]
       },
       {
-        carne: ["Feijoada", "Feijoada vegetariana"],
-        fixas: ["Arroz Parbolizado", "Arroz integral", "Feijão"],
-        complemento: ["Farofa simples"],
-        salada: ["Pepino Rodelas", "Couve Folha"],
+        carne: ["Picadinho de carne com batatas"],
+        fixas: fixas,
+        complemento: ["Brócolis cozido"],
+        salada: ["Alface", "Rabanete"],
         molho: ["Molho de ervas"],
+        sobremesa: ["Iogurte"]
+      },
+      {
+        carne: ["Moqueca de peixe"],
+        fixas: fixas,
+        complemento: ["Batata doce ao forno"],
+        salada: ["Rúcula", "Cenoura ralada"],
+        molho: ["Vinagrete"],
         sobremesa: ["Laranja"]
       },
       {
-        carne: ["Risoto de Frango"],
-        fixas: ["Arroz Parbolizado", "Arroz integral", "Feijão"],
-        complemento: ["Abóbora cozida"],
-        salada: ["Chuchu cozido"],
-        molho: ["Vinagrete"],
-        molho: ["Abacaxi"],
+        carne: ["Carne assada de panela"],
+        fixas: fixas,
+        complemento: ["Aipim cozido"],
+        salada: ["Couve-flor cozida"],
+        molho: ["Molho de mostarda"],
+        sobremesa: ["Maça"],
       }
     ]
 
     return {
-      "dataFinal": '20/11/2022',
+      "dataFinal": '27/11/2022',
       "cardapio": MENU_TEMPORARY
     }
 }
