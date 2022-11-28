@@ -58,11 +58,12 @@ const convert = (html) => {
   }
 
 const formatData = (data) => { 
-   const date = data[6][0].split(`\n`)[1]
+   const date = data[6][0]?.split(`\n`)[0]
+   const cleaned = date?.substring(date.indexOf(' ') + 1)
     
-    const dia = date.substring(0, 2)
-    const mes = mesesDic[date.substring(3, 6)]
-    const ano =  date.substring(7, 9)
+    const dia = cleaned.substring(0, 2)
+    const mes = mesesDic[cleaned.substring(3, 6)]
+    const ano =  cleaned.substring(7, 9)
 
     let dataFinal = undefined
     if (dia && mes && ano ) dataFinal = `${dia}/${mes}/${ano}`
@@ -225,9 +226,9 @@ const formatData = (data) => {
 // }
 
 const createItem = (menu) => {
-  const e = menu[1]
-  const item = e.split('\n')
-  item.shift()
+  const e = menu[0]
+  const item = e?.split('\n')
+  item?.shift()
   let itemObj = {}
   itemObj.carne = []
   itemObj.fixas = ["Arroz Parbolizado", "Arroz integral", "Feijão"]
@@ -236,7 +237,7 @@ const createItem = (menu) => {
   itemObj.molho = []
   itemObj.sobremesa = []
   let n = 0
-  while (n < item.length) {
+  while (n < item?.length) {
     if (n == item.length - 1) {
       const trimmed = item[n].substring(item[n].indexOf(':') + 2)
       item[n].includes(':') ? itemObj.sobremesa.push(trimmed) : itemObj.sobremesa.push(item[n])
