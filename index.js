@@ -234,8 +234,8 @@ const createItem = (menu) => {
   itemObj.fixas = ["Arroz Parbolizado", "Arroz integral", "Feijão"]
   itemObj.complemento = []
   itemObj.salada = []
-  itemObj.molho = []
   itemObj.sobremesa = []
+  itemObj.molho = []
   let n = 0
   while (n < item?.length) {
     if (n == item.length - 1) {
