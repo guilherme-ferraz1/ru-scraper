@@ -10,18 +10,18 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 const mesesDic = {
-    "jan": '01',
-    "fev": '02',
-    "mar": '03',
-    "abr": '04',
-    "mai": '05',
-    "jun": '06',
-    "jul": '07',
-    "ago": '08',
-    "set": '09',
-    "out": '10',
-    "nov": '11',
-    "dez": '12',
+  "jan": '01',
+  "fev": '02',
+  "mar": '03',
+  "abr": '04',
+  "mai": '05',
+  "jun": '06',
+  "jul": '07',
+  "ago": '08',
+  "set": '09',
+  "out": '10',
+  "nov": '11',
+  "dez": '12',
 }
 
 const convert = (html) => {
@@ -80,150 +80,70 @@ const formatData = (data) => {
 
     const fixas = ["Arroz Parbolizado", "Arroz integral", "Feijão"]
 
-    const MENU_TEMPORARY = [
-      {
-        carne: ["Bisteca suína acebolada"],
-        fixas: fixas,
-        complemento: ["Polenta simples"],
-        salada: ["Couve Folha", "Cenoura ralada"],
-        molho: ["Vinagrete"],
-        sobremesa: ["Maçã"]
-      },
-      {
-        carne: ["Frango com linguiça"],
-        fixas: fixas,
-        complemento: ["Chuchu cozido"],
-        salada: ["Chicória", "Beterraba Ralada"],
-        molho: ["Molho de mostarda"],
-        sobremesa: ["Laranja"]
-      },
-      {
-        carne: ["Carne moída com seleta de legumes, Sassami de frango empanado (jantar)"],
-        fixas: fixas,
-        complemento: ["Farofa com batata palha, Macarrão com ervas (jantar)"],
-        salada: ["Repolho roxo", "Pepino Rodelas"],
-        molho: ["Molho de ervas"],
-        sobremesa: ["Maça"]
-      },
-      {
-        carne: ["Frango à portuguesa"],
-        fixas: fixas,
-        complemento: ["Abóbora cozida"],
-        salada: ["Agrião", "Beterraba Ralada"],
-        molho: ["Molho de mostarda"],
-        sobremesa: ["Banana"]
-      },
-      {
-        carne: ["Picadinho de carne com batatas"],
-        fixas: fixas,
-        complemento: ["Brócolis cozido"],
-        salada: ["Alface", "Rabanete"],
-        molho: ["Molho de ervas"],
-        sobremesa: ["Iogurte"]
-      },
-      {
-        carne: ["Moqueca de peixe"],
-        fixas: fixas,
-        complemento: ["Batata doce ao forno"],
-        salada: ["Rúcula", "Cenoura ralada"],
-        molho: ["Vinagrete"],
-        sobremesa: ["Laranja"]
-      },
-      {
-        carne: ["Carne assada de panela"],
-        fixas: fixas,
-        complemento: ["Aipim cozido"],
-        salada: ["Couve-flor cozida"],
-        molho: ["Molho de mostarda"],
-        sobremesa: ["Maça"],
-      }
-    ]
+    // const MENU_TEMPORARY = [
+    //   {
+    //     carne: ["Bisteca suína acebolada"],
+    //     fixas: fixas,
+    //     complemento: ["Polenta simples"],
+    //     salada: ["Couve Folha", "Cenoura ralada"],
+    //     molho: ["Vinagrete"],
+    //     sobremesa: ["Maçã"]
+    //   },
+    //   {
+    //     carne: ["Frango com linguiça"],
+    //     fixas: fixas,
+    //     complemento: ["Chuchu cozido"],
+    //     salada: ["Chicória", "Beterraba Ralada"],
+    //     molho: ["Molho de mostarda"],
+    //     sobremesa: ["Laranja"]
+    //   },
+    //   {
+    //     carne: ["Carne moída com seleta de legumes, Sassami de frango empanado (jantar)"],
+    //     fixas: fixas,
+    //     complemento: ["Farofa com batata palha, Macarrão com ervas (jantar)"],
+    //     salada: ["Repolho roxo", "Pepino Rodelas"],
+    //     molho: ["Molho de ervas"],
+    //     sobremesa: ["Maça"]
+    //   },
+    //   {
+    //     carne: ["Frango à portuguesa"],
+    //     fixas: fixas,
+    //     complemento: ["Abóbora cozida"],
+    //     salada: ["Agrião", "Beterraba Ralada"],
+    //     molho: ["Molho de mostarda"],
+    //     sobremesa: ["Banana"]
+    //   },
+    //   {
+    //     carne: ["Picadinho de carne com batatas"],
+    //     fixas: fixas,
+    //     complemento: ["Brócolis cozido"],
+    //     salada: ["Alface", "Rabanete"],
+    //     molho: ["Molho de ervas"],
+    //     sobremesa: ["Iogurte"]
+    //   },
+    //   {
+    //     carne: ["Moqueca de peixe"],
+    //     fixas: fixas,
+    //     complemento: ["Batata doce ao forno"],
+    //     salada: ["Rúcula", "Cenoura ralada"],
+    //     molho: ["Vinagrete"],
+    //     sobremesa: ["Laranja"]
+    //   },
+    //   {
+    //     carne: ["Carne assada de panela"],
+    //     fixas: fixas,
+    //     complemento: ["Aipim cozido"],
+    //     salada: ["Couve-flor cozida"],
+    //     molho: ["Molho de mostarda"],
+    //     sobremesa: ["Maça"],
+    //   }
+    // ]
 
     return {
       "dataFinal": dataFinal,
       "cardapio": menu
     }
 }
-
-// const getCarnes = (string) => {
-//   let arr = []
-//   let newStr = string.toUpperCase()
-
-//   if (string.toUpperCase().includes('CARNE JANTAR')) {
-//     arr.push(string.substring(newStr.indexOf('CARNE JANTAR') + 13, newStr.indexOf(('COMPLEMENTO'))))
-//     arr.push(string.substring(newStr.indexOf('CARNE ALMOÇO') + 13, newStr.indexOf(('CARNE JANTAR'))))
-//     return arr
-//   }
-
-//   if (string.toUpperCase().includes('CARNE (JANTAR)')) {
-//     arr.push(string.substring(newStr.indexOf('CARNE (JANTAR)') + 15, newStr.indexOf('COMPLEMENTO')))
-//     arr.push(string.substring(newStr.indexOf('CARNE (ALMOÇO)') + 15, newStr.indexOf(('CARNE (ALMOÇO)'))))
-//     return arr
-//   }
-
-//   arr.push(string.substring(newStr.indexOf('CARNE') + 6, newStr.indexOf(('COMPLEMENTO'))))
-//   return arr
-// }
-
-// const getComplementos = (string) => {
-//   let arr = []
-//   let newStr = string.toUpperCase()
-
-//   if (string.toUpperCase().includes('COMPLEMENTO JANTAR')) {
-//     arr.push(string.substring(newStr.indexOf('COMPLEMENTO JANTAR') + 19, newStr.indexOf(('SALADA'))))
-//     arr.push(string.substring(newStr.indexOf('COMPLEMENTO ALMOÇO') + 19, newStr.indexOf(('COMPLEMENTO JANTAR'))))
-//     return arr
-//   }
-
-//   if (string.toUpperCase().includes('COMPLEMENTO (JANTAR)')) {
-//     arr.push(string.substring(newStr.indexOf('COMPLEMENTO (JANTAR)') + 21, newStr.indexOf('SALADA')))
-//     arr.push(string.substring(newStr.indexOf('COMPLEMENTO (ALMOÇO)') + 21, newStr.indexOf(('COMPLEMENTO (ALMOÇO)'))))
-//     return arr
-//   }
-
-//   arr.push(string.substring(newStr.indexOf('COMPLEMENTO') + 12, newStr.indexOf(('SALADA'))))
-//   return arr
-// }
-
-// const getSalada = (string) => {
-//   let arr = []
-//   let newStr = string.toUpperCase()
-
-//   if (string.toUpperCase().includes('SALADA 2')) {
-//     arr.push(string.substring(newStr.indexOf('SALADA 1') + 9, newStr.indexOf(('SALADA 2'))))
-//     if (newStr.includes(('SOBREMESA'))) {
-//       arr.push(string.substring(newStr.indexOf('SALADA 2') + 9, newStr.indexOf(('SOBREMESA'))))
-//     } else {
-//       arr.push(string.substring(newStr.indexOf('SALADA 2') + 9, newStr.indexOf(('MOLHO'))))
-//     }
-//     return arr
-//   }
-
-//   arr.push(string.substring(newStr.indexOf('SALADA 1') + 9, newStr.indexOf(('SOBREMESA'))))
-//   return arr
-// }
-
-// const getSobremesa = (string) => {
-//   let arr = []
-//   let newStr = string.toUpperCase()
-
-//   if (string.toUpperCase().includes('SOBREMESA')) {
-//     arr.push(string.substring(newStr.indexOf('SOBREMESA') + 10, newStr.indexOf(('MOLHO SALADA'))))
-//   }
-
-//   return arr
-// }
-
-// const getMolho = (string) => {
-//   let arr = []
-//   let newStr = string.toUpperCase()
-
-//   if (string.toUpperCase().includes('MOLHO SALADA')) {
-//     arr.push(string.substring(newStr.indexOf('MOLHO SALADA') + 13))
-//   }
-
-//   return arr
-// }
 
 const createItem = (menu) => {
   const e = menu[0]
