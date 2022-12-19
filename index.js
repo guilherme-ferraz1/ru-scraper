@@ -86,56 +86,56 @@ const formatData = (data) => {
         fixas: fixas,
         complemento: ["Lentilha refogada"],
         salada: ["Agrião", "Pepino Rodelas"],
-        molho: ["Molho de mostarda"],
-        sobremesa: ["Laranja"]
+        sobremesa: ["Laranja"],
+        molho: ["Molho de mostarda"]
       },
       {
         carne: ["Carne assada de panela"],
         fixas: fixas,
         complemento: ["Polenta simples"],
         salada: ["Acelga", "Beterraba Ralada"],
-        molho: ["Molho de ervas"],
-        sobremesa: []
+        sobremesa: ["Não definido"],
+        molho: ["Molho de ervas"]
       },
       {
         carne: ["Lombinho suíno ao molho de mostarda"],
         fixas: fixas,
         complemento: ["Batata doce ao forno"],
         salada: ["Couve Folha", "Salada russa"],
-        molho: ["Molho de mostarda"],
-        sobremesa: ["Bombom"]
+        sobremesa: ["Bombom"],
+        molho: ["Molho de mostarda"]
       },
       {
         carne: ["Estrogonofe de frango"],
         fixas: fixas,
         complemento: ["Batata palha"],
         salada: ["Rúcula", "Rabanete Ralado"],
-        molho: ["Molho de ervas"],
-        sobremesa: ["Iogurte"]
+        sobremesa: ["Iogurte"],
+        molho: ["Molho de ervas"]
       },
       {
         carne: ["Filé de peixe empanado"],
         fixas: fixas,
         complemento: ["Brócolis cozido"],
         salada: ["Alface", "Cenoura ralada"],
-        molho: ["Molho de mostarda"],
-        sobremesa: []
+        sobremesa: ["Não definido"],
+        molho: ["Molho de mostarda"]
       },
       {
-        carne: [],
-        fixas: [],
-        complemento: [],
-        salada: [],
-        molho: [],
-        sobremesa: []
+        carne: ["Não definido"],
+        fixas: ["Não definido"],
+        complemento: ["Não definido"],
+        salada: ["Não definido"],
+        molho: ["Não definido"],
+        sobremesa: ["Não definido"]
       },
       {
-        carne: [],
-        fixas: [],
-        complemento: [],
-        salada: [],
-        molho: [],
-        sobremesa: [],
+        carne: ["Não definido"],
+        fixas: ["Não definido"],
+        complemento: ["Não definido"],
+        salada: ["Não definido"],
+        molho: ["Não definido"],
+        sobremesa: ["Não definido"],
       }
     ]
 
