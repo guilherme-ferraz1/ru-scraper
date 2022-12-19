@@ -68,80 +68,80 @@ const formatData = (data) => {
     let dataFinal = undefined
     if (dia && mes && ano ) dataFinal = `${dia}/${mes}/${ano}`
 
-    const menu = [
-      createItem(data[0]),
-      createItem(data[1]),
-      createItem(data[2]),
-      createItem(data[3]),
-      createItem(data[4]),
-      createItem(data[5]),
-      createItem(data[6]),
-    ]
+    // const menu = [
+    //   createItem(data[0]),
+    //   createItem(data[1]),
+    //   createItem(data[2]),
+    //   createItem(data[3]),
+    //   createItem(data[4]),
+    //   createItem(data[5]),
+    //   createItem(data[6]),
+    // ]
 
     const fixas = ["Arroz Parbolizado", "Arroz integral", "Feijão"]
 
-    // const MENU_TEMPORARY = [
-    //   {
-    //     carne: ["Bisteca suína acebolada"],
-    //     fixas: fixas,
-    //     complemento: ["Polenta simples"],
-    //     salada: ["Couve Folha", "Cenoura ralada"],
-    //     molho: ["Vinagrete"],
-    //     sobremesa: ["Maçã"]
-    //   },
-    //   {
-    //     carne: ["Frango com linguiça"],
-    //     fixas: fixas,
-    //     complemento: ["Chuchu cozido"],
-    //     salada: ["Chicória", "Beterraba Ralada"],
-    //     molho: ["Molho de mostarda"],
-    //     sobremesa: ["Laranja"]
-    //   },
-    //   {
-    //     carne: ["Carne moída com seleta de legumes, Sassami de frango empanado (jantar)"],
-    //     fixas: fixas,
-    //     complemento: ["Farofa com batata palha, Macarrão com ervas (jantar)"],
-    //     salada: ["Repolho roxo", "Pepino Rodelas"],
-    //     molho: ["Molho de ervas"],
-    //     sobremesa: ["Maça"]
-    //   },
-    //   {
-    //     carne: ["Frango à portuguesa"],
-    //     fixas: fixas,
-    //     complemento: ["Abóbora cozida"],
-    //     salada: ["Agrião", "Beterraba Ralada"],
-    //     molho: ["Molho de mostarda"],
-    //     sobremesa: ["Banana"]
-    //   },
-    //   {
-    //     carne: ["Picadinho de carne com batatas"],
-    //     fixas: fixas,
-    //     complemento: ["Brócolis cozido"],
-    //     salada: ["Alface", "Rabanete"],
-    //     molho: ["Molho de ervas"],
-    //     sobremesa: ["Iogurte"]
-    //   },
-    //   {
-    //     carne: ["Moqueca de peixe"],
-    //     fixas: fixas,
-    //     complemento: ["Batata doce ao forno"],
-    //     salada: ["Rúcula", "Cenoura ralada"],
-    //     molho: ["Vinagrete"],
-    //     sobremesa: ["Laranja"]
-    //   },
-    //   {
-    //     carne: ["Carne assada de panela"],
-    //     fixas: fixas,
-    //     complemento: ["Aipim cozido"],
-    //     salada: ["Couve-flor cozida"],
-    //     molho: ["Molho de mostarda"],
-    //     sobremesa: ["Maça"],
-    //   }
-    // ]
+    const MENU_TEMPORARY = [
+      {
+        carne: ["Filé de peixe ao molho de alcaparras"],
+        fixas: fixas,
+        complemento: ["Lentilha refogada"],
+        salada: ["Agrião", "Pepino Rodelas"],
+        molho: ["Molho de mostarda"],
+        sobremesa: ["Laranja"]
+      },
+      {
+        carne: ["Carne assada de panela"],
+        fixas: fixas,
+        complemento: ["Polenta simples"],
+        salada: ["Acelga", "Beterraba Ralada"],
+        molho: ["Molho de ervas"],
+        sobremesa: []
+      },
+      {
+        carne: ["Lombinho suíno ao molho de mostarda"],
+        fixas: fixas,
+        complemento: ["Batata doce ao forno"],
+        salada: ["Couve Folha", "Salada russa"],
+        molho: ["Molho de mostarda"],
+        sobremesa: ["Bombom"]
+      },
+      {
+        carne: ["Estrogonofe de frango"],
+        fixas: fixas,
+        complemento: ["Batata palha"],
+        salada: ["Rúcula", "Rabanete Ralado"],
+        molho: ["Molho de ervas"],
+        sobremesa: ["Iogurte"]
+      },
+      {
+        carne: ["Filé de peixe empanado"],
+        fixas: fixas,
+        complemento: ["Brócolis cozido"],
+        salada: ["Alface", "Cenoura ralada"],
+        molho: ["Molho de mostarda"],
+        sobremesa: []
+      },
+      {
+        carne: [],
+        fixas: [],
+        complemento: [],
+        salada: [],
+        molho: [],
+        sobremesa: []
+      },
+      {
+        carne: [],
+        fixas: [],
+        complemento: [],
+        salada: [],
+        molho: [],
+        sobremesa: [],
+      }
+    ]
 
     return {
-      "dataFinal": dataFinal,
-      "cardapio": menu
+      "dataFinal": '23/12/22',
+      "cardapio": MENU_TEMPORARY
     }
 }
 
@@ -215,3 +215,5 @@ app.get('/cardapio-floripa', async (req, res) => {
 });
 
 app.listen(port)
+
+start()
