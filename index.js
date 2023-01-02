@@ -90,8 +90,6 @@ const formatData = (data) => {
       // createItem(domingo ?? []),
     ]
     
-    console.log(menu)
-
     // const fixas = ["Arroz Parbolizado", "Arroz integral", "Feijão"]
 
     // const MENU_TEMPORARY = [
