@@ -70,12 +70,11 @@ const formatData = (data) => {
   //  const sabado = nonEmpty.slice(nonEmpty.indexOf('SABADO'), nonEmpty.indexOf('DOMINGO'))
   //  const domingo = nonEmpty.slice(nonEmpty.indexOf('DOMINGO'))
   
-   const date = data[6][0]?.split(`\n`)[0]
-   const cleaned = date?.substring(date.indexOf(' ') + 1)
+   const date = nonEmpty[nonEmpty.indexOf('SEXTA-FEIRA') + 2]
     
-    const dia = cleaned.substring(0, 2)
-    const mes = mesesDic[cleaned.substring(3, 6)]
-    const ano =  cleaned.substring(7, 9)
+    const dia = date.substring(0, 2)
+    const mes = mesesDic[date.substring(3, 6)]
+    const ano =  date.substring(7, 9)
 
     let dataFinal = undefined
     if (dia && mes && ano ) dataFinal = `${dia}/${mes}/${ano}`
@@ -86,8 +85,22 @@ const formatData = (data) => {
       createItem(quarta),
       createItem(quinta),
       createItem(sexta),
-      // createItem(sabado ?? []),
-      // createItem(domingo ?? []),
+      {
+        carne: ["Não definido"],
+        fixas: ["Não definido"],
+        complemento: ["Não definido"],
+        salada: ["Não definido"],
+        molho: ["Não definido"],
+        sobremesa: ["Não definido"]
+      },
+      {
+        carne: ["Não definido"],
+        fixas: ["Não definido"],
+        complemento: ["Não definido"],
+        salada: ["Não definido"],
+        molho: ["Não definido"],
+        sobremesa: ["Não definido"]
+      },
     ]
     
     // const fixas = ["Arroz Parbolizado", "Arroz integral", "Feijão"]
@@ -152,7 +165,7 @@ const formatData = (data) => {
     // ]
 
     return {
-      "dataFinal": '23/12/22',
+      "dataFinal": dataFinal,
       "cardapio": menu
     }
 }
