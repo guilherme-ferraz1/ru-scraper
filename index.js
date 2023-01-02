@@ -183,7 +183,10 @@ const createItem = (menu) => {
     if (n == menu.length - 1) {
       const trimmed = menu[menu.length - 1]
       if (!trimmed.includes('Molho ')) itemObj.sobremesa.push(trimmed)
-      else itemObj.molho.push(trimmed)
+      else {
+        itemObj.molho.push(trimmed)
+        itemObj.sobremesa.push('Não definido')
+      }
     }
     if (n == menu.length - 2) {
       const trimmed = menu[menu.length - 2]
