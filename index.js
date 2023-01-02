@@ -58,6 +58,18 @@ const convert = (html) => {
   }
 
 const formatData = (data) => { 
+   const cleanedData = data.map((obj) => Object.values(obj))
+   const arr1d = [].concat(...cleanedData)
+   const nonEmpty = arr1d.filter((e) => e !== '')
+   
+   const segunda = nonEmpty.slice(0, nonEmpty.indexOf('TERÇA-FEIRA'))
+   const terca = nonEmpty.slice(nonEmpty.indexOf('TERÇA-FEIRA'), nonEmpty.indexOf('QUARTA-FEIRA'))
+   const quarta = nonEmpty.slice(nonEmpty.indexOf('QUARTA-FEIRA'), nonEmpty.indexOf('QUINTA-FEIRA'))
+   const quinta = nonEmpty.slice(nonEmpty.indexOf('QUINTA-FEIRA'), nonEmpty.indexOf('SEXTA-FEIRA'))
+   const sexta = nonEmpty.slice(nonEmpty.indexOf('SEXTA-FEIRA'))
+  //  const sabado = nonEmpty.slice(nonEmpty.indexOf('SABADO'), nonEmpty.indexOf('DOMINGO'))
+  //  const domingo = nonEmpty.slice(nonEmpty.indexOf('DOMINGO'))
+  
    const date = data[6][0]?.split(`\n`)[0]
    const cleaned = date?.substring(date.indexOf(' ') + 1)
     
@@ -68,87 +80,86 @@ const formatData = (data) => {
     let dataFinal = undefined
     if (dia && mes && ano ) dataFinal = `${dia}/${mes}/${ano}`
 
-    // const menu = [
-    //   createItem(data[0]),
-    //   createItem(data[1]),
-    //   createItem(data[2]),
-    //   createItem(data[3]),
-    //   createItem(data[4]),
-    //   createItem(data[5]),
-    //   createItem(data[6]),
-    // ]
-
-    const fixas = ["Arroz Parbolizado", "Arroz integral", "Feijão"]
-
-    const MENU_TEMPORARY = [
-      {
-        carne: ["Filé de peixe ao molho de alcaparras"],
-        fixas: fixas,
-        complemento: ["Lentilha refogada"],
-        salada: ["Agrião", "Pepino Rodelas"],
-        sobremesa: ["Laranja"],
-        molho: ["Molho de mostarda"]
-      },
-      {
-        carne: ["Carne assada de panela"],
-        fixas: fixas,
-        complemento: ["Polenta simples"],
-        salada: ["Acelga", "Beterraba Ralada"],
-        sobremesa: ["Não definido"],
-        molho: ["Molho de ervas"]
-      },
-      {
-        carne: ["Lombinho suíno ao molho de mostarda"],
-        fixas: fixas,
-        complemento: ["Batata doce ao forno"],
-        salada: ["Couve Folha", "Salada russa"],
-        sobremesa: ["Bombom"],
-        molho: ["Molho de mostarda"]
-      },
-      {
-        carne: ["Estrogonofe de frango"],
-        fixas: fixas,
-        complemento: ["Batata palha"],
-        salada: ["Rúcula", "Rabanete Ralado"],
-        sobremesa: ["Iogurte"],
-        molho: ["Molho de ervas"]
-      },
-      {
-        carne: ["Filé de peixe empanado"],
-        fixas: fixas,
-        complemento: ["Brócolis cozido"],
-        salada: ["Alface", "Cenoura ralada"],
-        sobremesa: ["Não definido"],
-        molho: ["Molho de mostarda"]
-      },
-      {
-        carne: ["Não definido"],
-        fixas: ["Não definido"],
-        complemento: ["Não definido"],
-        salada: ["Não definido"],
-        molho: ["Não definido"],
-        sobremesa: ["Não definido"]
-      },
-      {
-        carne: ["Não definido"],
-        fixas: ["Não definido"],
-        complemento: ["Não definido"],
-        salada: ["Não definido"],
-        molho: ["Não definido"],
-        sobremesa: ["Não definido"],
-      }
+    const menu = [
+      createItem(segunda),
+      createItem(terca),
+      createItem(quarta),
+      createItem(quinta),
+      createItem(sexta),
+      // createItem(sabado ?? []),
+      // createItem(domingo ?? []),
     ]
+    
+    console.log(menu)
+
+    // const fixas = ["Arroz Parbolizado", "Arroz integral", "Feijão"]
+
+    // const MENU_TEMPORARY = [
+    //   {
+    //     carne: ["Filé de peixe ao molho de alcaparras"],
+    //     fixas: fixas,
+    //     complemento: ["Lentilha refogada"],
+    //     salada: ["Agrião", "Pepino Rodelas"],
+    //     sobremesa: ["Laranja"],
+    //     molho: ["Molho de mostarda"]
+    //   },
+    //   {
+    //     carne: ["Carne assada de panela"],
+    //     fixas: fixas,
+    //     complemento: ["Polenta simples"],
+    //     salada: ["Acelga", "Beterraba Ralada"],
+    //     sobremesa: ["Não definido"],
+    //     molho: ["Molho de ervas"]
+    //   },
+    //   {
+    //     carne: ["Lombinho suíno ao molho de mostarda"],
+    //     fixas: fixas,
+    //     complemento: ["Batata doce ao forno"],
+    //     salada: ["Couve Folha", "Salada russa"],
+    //     sobremesa: ["Bombom"],
+    //     molho: ["Molho de mostarda"]
+    //   },
+    //   {
+    //     carne: ["Estrogonofe de frango"],
+    //     fixas: fixas,
+    //     complemento: ["Batata palha"],
+    //     salada: ["Rúcula", "Rabanete Ralado"],
+    //     sobremesa: ["Iogurte"],
+    //     molho: ["Molho de ervas"]
+    //   },
+    //   {
+    //     carne: ["Filé de peixe empanado"],
+    //     fixas: fixas,
+    //     complemento: ["Brócolis cozido"],
+    //     salada: ["Alface", "Cenoura ralada"],
+    //     sobremesa: ["Não definido"],
+    //     molho: ["Molho de mostarda"]
+    //   },
+    //   {
+    //     carne: ["Não definido"],
+    //     fixas: ["Não definido"],
+    //     complemento: ["Não definido"],
+    //     salada: ["Não definido"],
+    //     molho: ["Não definido"],
+    //     sobremesa: ["Não definido"]
+    //   },
+    //   {
+    //     carne: ["Não definido"],
+    //     fixas: ["Não definido"],
+    //     complemento: ["Não definido"],
+    //     salada: ["Não definido"],
+    //     molho: ["Não definido"],
+    //     sobremesa: ["Não definido"],
+    //   }
+    // ]
 
     return {
       "dataFinal": '23/12/22',
-      "cardapio": MENU_TEMPORARY
+      "cardapio": menu
     }
 }
 
 const createItem = (menu) => {
-  const e = menu[0]
-  const item = e?.split('\n')
-  item?.shift()
   let itemObj = {}
   itemObj.carne = []
   itemObj.fixas = ["Arroz Parbolizado", "Arroz integral", "Feijão"]
@@ -157,42 +168,41 @@ const createItem = (menu) => {
   itemObj.sobremesa = []
   itemObj.molho = []
   let n = 0
-  while (n < item?.length) {
-    if (n == item.length - 1) {
-      const trimmed = item[n].substring(item[n].indexOf(':') + 2)
-      item[n].includes(':') ? itemObj.sobremesa.push(trimmed) : itemObj.sobremesa.push(item[n])
+  while (n < menu?.length) {
+    if (n == menu.length - 1) {
+      const trimmed = menu[menu.length - 1]
+      if (!trimmed.includes('Molho ')) itemObj.sobremesa.push(trimmed)
+      else itemObj.molho.push(trimmed)
     }
-    if (n == item.length - 2) {
-      const trimmed = item[n].substring(item[n].indexOf(':') + 2)
-      item[n].includes(':') ? itemObj.molho.push(trimmed) : itemObj.molho.push(item[n])
+    if (n == menu.length - 2) {
+      const trimmed = menu[menu.length - 2]
+      if (trimmed.includes('Molho ')) itemObj.molho.push(trimmed)
     }
-    if (item[n].toUpperCase().includes('CARNE:')) {
-      const trimmed = item[n].substring(item[n].indexOf(':') + 2)
+    if (menu[n].toUpperCase() == 'CARNE:') {
+      const trimmed = menu[n + 1]
       itemObj.carne.push(trimmed)
     }
-    if (item[n].toUpperCase().includes('CARNE (JANTAR)')) {
-      const trimmed = item[n].substring(item[n].indexOf(':') + 2)
-      itemObj.carne.push(trimmed + ' (jantar)')
+    if (menu[n].toUpperCase() == 'CARNE (JANTAR):') {
+      const trimmed = menu[n + 1]
+      if (!menu[n + 1].includes(':')) itemObj.carne.push(trimmed + ' (jantar)')
     }
-    if (item[n].toUpperCase().includes('COMPLEMENTO:')) {
-      const trimmed = item[n].substring(item[n].indexOf(':') + 2)
+    if (menu[n].toUpperCase() == 'COMPLEMENTO:') {
+      const trimmed = menu[n + 1]
       itemObj.complemento.push(trimmed)
     }
-    if (item[n].toUpperCase().includes('COMPLEMENTO (JANTAR)')) {
-      const trimmed = item[n].substring(item[n].indexOf(':') + 2)
-      itemObj.complemento.push(trimmed + ' (jantar)')
+    if (menu[n].toUpperCase() == 'COMPLEMENTO (JANTAR):') {
+      const trimmed = menu[n + 1]
+      if (!menu[n + 1].includes(':')) itemObj.complemento.push(trimmed + ' (jantar)')
     }
-    if (item[n].toUpperCase().includes('SALADAS')) {
-      const trimmed = item[n].substring(item[n].indexOf(':') + 2)
-      itemObj.salada.push(trimmed)
-    }
-    if (item[n].toUpperCase().includes('SOBREMESA')) {
-      const trimmed = item[n].substring(item[n].indexOf(':') + 2)
-      itemObj.sobremesa.push(trimmed)
-    }
-    if (item[n].toUpperCase().includes('MOLHO:')) {
-      const trimmed = item[n].substring(item[n].indexOf(':') + 2)
-      itemObj.molho.push(trimmed)
+    if (menu[n].toUpperCase() == 'SALADAS:') {
+      let i = 1
+      while (i < 3) {
+        if (!menu[n + i]?.includes('Molho ')) {
+          const trimmed = menu[n + i]
+          itemObj.salada.push(trimmed)
+        }
+        i++
+      }
     }
     n++
   }
@@ -215,5 +225,3 @@ app.get('/cardapio-floripa', async (req, res) => {
 });
 
 app.listen(port)
-
-start()
