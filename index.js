@@ -103,70 +103,70 @@ const formatData = (data) => {
       },
     ]
     
-    // const fixas = ["Arroz Parbolizado", "Arroz integral", "Feijão"]
+    const fixas = ["Arroz Parbolizado", "Arroz integral", "Feijão"]
 
-    // const MENU_TEMPORARY = [
-    //   {
-    //     carne: ["Filé de peixe ao molho de alcaparras"],
-    //     fixas: fixas,
-    //     complemento: ["Lentilha refogada"],
-    //     salada: ["Agrião", "Pepino Rodelas"],
-    //     sobremesa: ["Laranja"],
-    //     molho: ["Molho de mostarda"]
-    //   },
-    //   {
-    //     carne: ["Carne assada de panela"],
-    //     fixas: fixas,
-    //     complemento: ["Polenta simples"],
-    //     salada: ["Acelga", "Beterraba Ralada"],
-    //     sobremesa: ["Não definido"],
-    //     molho: ["Molho de ervas"]
-    //   },
-    //   {
-    //     carne: ["Lombinho suíno ao molho de mostarda"],
-    //     fixas: fixas,
-    //     complemento: ["Batata doce ao forno"],
-    //     salada: ["Couve Folha", "Salada russa"],
-    //     sobremesa: ["Bombom"],
-    //     molho: ["Molho de mostarda"]
-    //   },
-    //   {
-    //     carne: ["Estrogonofe de frango"],
-    //     fixas: fixas,
-    //     complemento: ["Batata palha"],
-    //     salada: ["Rúcula", "Rabanete Ralado"],
-    //     sobremesa: ["Iogurte"],
-    //     molho: ["Molho de ervas"]
-    //   },
-    //   {
-    //     carne: ["Filé de peixe empanado"],
-    //     fixas: fixas,
-    //     complemento: ["Brócolis cozido"],
-    //     salada: ["Alface", "Cenoura ralada"],
-    //     sobremesa: ["Não definido"],
-    //     molho: ["Molho de mostarda"]
-    //   },
-    //   {
-    //     carne: ["Não definido"],
-    //     fixas: ["Não definido"],
-    //     complemento: ["Não definido"],
-    //     salada: ["Não definido"],
-    //     molho: ["Não definido"],
-    //     sobremesa: ["Não definido"]
-    //   },
-    //   {
-    //     carne: ["Não definido"],
-    //     fixas: ["Não definido"],
-    //     complemento: ["Não definido"],
-    //     salada: ["Não definido"],
-    //     molho: ["Não definido"],
-    //     sobremesa: ["Não definido"],
-    //   }
-    // ]
+    const MENU_TEMPORARY = [
+      {
+        carne: ["Filé de peixe empanado"],
+        fixas: fixas,
+        complemento: ["Polenta simples"],
+        salada: ["Repolho Roxo", "Pepino Rodelas"],
+        sobremesa: ["Laranja"],
+        molho: ["Vinagrete"]
+      },
+      {
+        carne: ["Frango ao molho curry", "Frango ao molho agridoce (jantar)"],
+        fixas: fixas,
+        complemento: ["Batata palha"],
+        salada: ["Chicória", "Beterraba Ralada"],
+        sobremesa: ["Banana"],
+        molho: ["Molho de ervas"]
+      },
+      {
+        carne: ["Carne bovina à portuguesa"],
+        fixas: fixas,
+        complemento: ["Batata doce ao forno"],
+        salada: ["Alface", "Cenoura ralada"],
+        sobremesa: ["Laranja"],
+        molho: ["Molho de mostarda"]
+      },
+      {
+        carne: ["Sobrecoxa de frango com ervas"],
+        fixas: fixas,
+        complemento: ["Retatouille"],
+        salada: ["Acelga", "Beterraba ralada"],
+        sobremesa: ["Banana"],
+        molho: ["Molho de ervas"]
+      },
+      {
+        carne: ["Quibe"],
+        fixas: fixas,
+        complemento: ["Grão de bico com espinafre"],
+        salada: ["Rúcula", "Rabanete Ralado"],
+        sobremesa: ["Bombom"],
+        molho: ["Vinagrete"]
+      },
+      {
+        carne: ["Carne assada de panela", "Almôndega bovina ao molho vermelho (jantar)"],
+        fixas: [fixas],
+        complemento: ["Purê de batatas"],
+        salada: ["Repolho", "Cenoura ralada"],
+        molho: ["Molho de ervas"],
+        sobremesa: ["Maçã"]
+      },
+      {
+        carne: ["Linguiça toscana"],
+        fixas: [fixas],
+        complemento: ["Farofa simples"],
+        salada: ["Maionese"],
+        molho: ["Vinagrete"],
+        sobremesa: ["Laranja"],
+      }
+    ]
 
     return {
-      "dataFinal": dataFinal,
-      "cardapio": menu
+      "dataFinal": "05/03/2023",
+      "cardapio": MENU_TEMPORARY
     }
 }
 
