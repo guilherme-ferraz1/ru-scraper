@@ -58,50 +58,50 @@ const convert = (html) => {
   }
 
 const formatData = (data) => { 
-   const cleanedData = data.map((obj) => Object.values(obj))
-   const arr1d = [].concat(...cleanedData)
-   const nonEmpty = arr1d.filter((e) => e !== '')
+  //  const cleanedData = data.map((obj) => Object.values(obj))
+  //  const arr1d = [].concat(...cleanedData)
+  //  const nonEmpty = arr1d.filter((e) => e !== '')
    
-   const segunda = nonEmpty.slice(0, nonEmpty.indexOf('TERÇA-FEIRA'))
-   const terca = nonEmpty.slice(nonEmpty.indexOf('TERÇA-FEIRA'), nonEmpty.indexOf('QUARTA-FEIRA'))
-   const quarta = nonEmpty.slice(nonEmpty.indexOf('QUARTA-FEIRA'), nonEmpty.indexOf('QUINTA-FEIRA'))
-   const quinta = nonEmpty.slice(nonEmpty.indexOf('QUINTA-FEIRA'), nonEmpty.indexOf('SEXTA-FEIRA'))
-   const sexta = nonEmpty.slice(nonEmpty.indexOf('SEXTA-FEIRA'))
-  //  const sabado = nonEmpty.slice(nonEmpty.indexOf('SABADO'), nonEmpty.indexOf('DOMINGO'))
-  //  const domingo = nonEmpty.slice(nonEmpty.indexOf('DOMINGO'))
+  //  const segunda = nonEmpty.slice(0, nonEmpty.indexOf('TERÇA-FEIRA'))
+  //  const terca = nonEmpty.slice(nonEmpty.indexOf('TERÇA-FEIRA'), nonEmpty.indexOf('QUARTA-FEIRA'))
+  //  const quarta = nonEmpty.slice(nonEmpty.indexOf('QUARTA-FEIRA'), nonEmpty.indexOf('QUINTA-FEIRA'))
+  //  const quinta = nonEmpty.slice(nonEmpty.indexOf('QUINTA-FEIRA'), nonEmpty.indexOf('SEXTA-FEIRA'))
+  //  const sexta = nonEmpty.slice(nonEmpty.indexOf('SEXTA-FEIRA'))
+  // //  const sabado = nonEmpty.slice(nonEmpty.indexOf('SABADO'), nonEmpty.indexOf('DOMINGO'))
+  // //  const domingo = nonEmpty.slice(nonEmpty.indexOf('DOMINGO'))
   
-   const date = nonEmpty[nonEmpty.indexOf('SEXTA-FEIRA') + 2]
+  //  const date = nonEmpty[nonEmpty.indexOf('SEXTA-FEIRA') + 2]
     
-    const dia = date.substring(0, 2)
-    const mes = mesesDic[date.substring(3, 6)]
-    const ano =  date.substring(7, 9)
+  //   const dia = date.substring(0, 2)
+  //   const mes = mesesDic[date.substring(3, 6)]
+  //   const ano =  date.substring(7, 9)
 
-    let dataFinal = undefined
-    if (dia && mes && ano ) dataFinal = `${dia}/${mes}/${ano}`
+  //   let dataFinal = undefined
+  //   if (dia && mes && ano ) dataFinal = `${dia}/${mes}/${ano}`
 
-    const menu = [
-      createItem(segunda),
-      createItem(terca),
-      createItem(quarta),
-      createItem(quinta),
-      createItem(sexta),
-      {
-        carne: ["Não definido"],
-        fixas: ["Não definido"],
-        complemento: ["Não definido"],
-        salada: ["Não definido"],
-        molho: ["Não definido"],
-        sobremesa: ["Não definido"]
-      },
-      {
-        carne: ["Não definido"],
-        fixas: ["Não definido"],
-        complemento: ["Não definido"],
-        salada: ["Não definido"],
-        molho: ["Não definido"],
-        sobremesa: ["Não definido"]
-      },
-    ]
+    // const menu = [
+    //   createItem(segunda),
+    //   createItem(terca),
+    //   createItem(quarta),
+    //   createItem(quinta),
+    //   createItem(sexta),
+    //   {
+    //     carne: ["Não definido"],
+    //     fixas: ["Não definido"],
+    //     complemento: ["Não definido"],
+    //     salada: ["Não definido"],
+    //     molho: ["Não definido"],
+    //     sobremesa: ["Não definido"]
+    //   },
+    //   {
+    //     carne: ["Não definido"],
+    //     fixas: ["Não definido"],
+    //     complemento: ["Não definido"],
+    //     salada: ["Não definido"],
+    //     molho: ["Não definido"],
+    //     sobremesa: ["Não definido"]
+    //   },
+    // ]
     
     const fixas = ["Arroz Parbolizado", "Arroz integral", "Feijão"]
 
