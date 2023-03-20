@@ -107,65 +107,65 @@ const formatData = (data) => {
 
     const MENU_TEMPORARY = [
       {
-        carne: ["Filé mignon suíno"],
+        carne: ["Filé de peixe empanado"],
         fixas: fixas,
-        complemento: ["Batata doce cozida"],
-        salada: ["Rúcula", "Cenoura ralada"],
-        sobremesa: ["Laranja"],
-        molho: ["Molho de mostarda"]
-      },
-      {
-        carne: ["Carne moída com milho, Almôndega bovina (jantar)"],
-        fixas: fixas,
-        complemento: ["Batata palha", "Farofa simples"],
-        salada: ["Repolho", "Beterraba Ralada"],
-        sobremesa: ["Banana"],
-        molho: ["Molho de ervas"]
-      },
-      {
-        carne: ["Sobrecoxa de frango com ervas"],
-        fixas: fixas,
-        complemento: ["Abobrinha cozida", "Purê de batatas (jantar)"],
-        salada: ["Pepino rodelas", "Alface"],
-        sobremesa: ["Laranja"],
-        molho: ["Molho de mostarda"]
-      },
-      {
-        carne: ["Carne bovina ao molho mostarda"],
-        fixas: fixas,
-        complemento: ["Cenoura cozida"],
-        salada: ["Agrião", "Beterraba Ralada"],
-        sobremesa: ["Banana"],
-        molho: ["Molho de ervas"]
-      },
-      {
-        carne: ["Frango ao molho vermelho"],
-        fixas: fixas,
-        complemento: ["Vagem cozida"],
-        salada: ["Couve folha", "Pepino Rodelas"],
-        sobremesa: ["Maça"],
-        molho: ["Molho de mostarda"]
-      },
-      {
-        carne: ["Filé de peixe ao molho de alcaparras"],
-        fixas: [fixas],
-        complemento: ["Macarrão ao alho e óleo"],
-        salada: ["Acelga", "Cenoura Ralada"],
+        complemento: ["Berinjela ao forno"],
+        salada: ["Alface", "Rabanete Ralado"],
         sobremesa: ["Laranja"],
         molho: ["Vinagrete"]
       },
       {
-        carne: ["Carne assada de panela"],
+        carne: ["Almôndega bovina", "Picadinho de carne com charque e linguiça (jantar)"],
+        fixas: fixas,
+        complemento: ["Batata cozida com alecrim"],
+        salada: ["Chicória", "Beterraba Ralada"],
+        sobremesa: ["Banana"],
+        molho: ["Molho de ervas"]
+      },
+      {
+        carne: ["Bisteca suína"],
+        fixas: fixas,
+        complemento: ["Grão de bico com seleta de legumes", "Creme de ervilha (jantar)"],
+        salada: ["Acelga", "Pepino rodelas"],
+        sobremesa: ["Laranja"],
+        molho: ["Vinagrete"]
+      },
+      {
+        carne: ["Bife"],
+        fixas: fixas,
+        complemento: ["Couve-flor cozida"],
+        salada: ["Rúcula", "Beterraba Ralada"],
+        sobremesa: ["Melão"],
+        molho: ["Molho de ervas"]
+      },
+      {
+        carne: ["Frango ao molho de espinafre"],
+        fixas: fixas,
+        complemento: ["Batata palha"],
+        salada: ["Agrião", "Cenoura ralada"],
+        sobremesa: ["Banana"],
+        molho: ["Molho de mostarda"]
+      },
+      {
+        carne: ["Carreteiro"],
         fixas: [fixas],
-        complemento: ["Aipim cozido"],
-        salada: ["Salada de soja em grãos"],
+        complemento: ["Vagem refogada"],
+        salada: ["Couve folha", "Pepino rodelas"],
+        sobremesa: ["Vinagrete"],
+        molho: ["Laranja"]
+      },
+      {
+        carne: ["Frango xadrez"],
+        fixas: [fixas],
+        complemento: ["Macarrão com ervas"],
+        salada: ["Chuchu cozido"],
         molho: ["Molho de ervas"],
         sobremesa: ["Maça"],
       }
     ]
 
     return {
-      "dataFinal": "19/03/2023",
+      "dataFinal": "26/03/2023",
       "cardapio": MENU_TEMPORARY
     }
 }
