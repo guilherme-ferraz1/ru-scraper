@@ -107,65 +107,65 @@ const formatData = (data) => {
 
     const MENU_TEMPORARY = [
       {
-        carne: ["Bisteca suína"],
+        carne: ["Risoto de frango"],
         fixas: fixas,
-        complemento: ["Lentilha refogada"],
-        salada: ["Alface", "Beterraba ralada"],
+        complemento: ["Batata palha"],
+        salada: ["Rúcula", "Rabanete ralado"],
         sobremesa: ["Maçã"],
-        molho: ["Molho de ervas"]
-      },
-      {
-        carne: ["Quibe"],
-        fixas: fixas,
-        complemento: ["Abobrinha refogada"],
-        salada: ["Agrião", "Cenoura ralada"],
-        sobremesa: ["Banana"],
-        molho: ["Vinagrete"]
-      },
-      {
-        carne: ["Bife acebolado"],
-        fixas: fixas,
-        complemento: ["Abóbora cozida"],
-        salada: ["Couve Folha", "Pepino Rodelas"],
-        sobremesa: ["Laranja"],
         molho: ["Molho de mostarda"]
       },
       {
-        carne: ["Frango com seleta de legumes"],
+        carne: ["Filé mignon suíno acebolado ao molho agridoce"],
         fixas: fixas,
-        complemento: ["Mandioquinha"],
-        salada: ["Acelga", "Rabanete Ralado"],
+        complemento: ["Vagem refogada"],
+        salada: ["Alface", "Beterraba ralada"],
+        sobremesa: ["Banana"],
+        molho: ["Vinagrete"]
+      },
+      {
+        carne: ["Carne moída com azeitonas"],
+        fixas: fixas,
+        complemento: ["Repolho refogado"],
+        salada: ["Agrião", "Cenoura ralada"],
         sobremesa: ["Banana"],
         molho: ["Molho de ervas"]
       },
       {
-        carne: ["Estrogonofe de carne"],
+        carne: ["Sobrecoxa de frango"],
         fixas: fixas,
-        complemento: ["Batata palha"],
-        salada: ["Rúcula", "Cenoura ralada"],
+        complemento: ["Abobrinha refogada"],
+        salada: ["Chicória", "Pepino Rodelas"],
         sobremesa: ["Maçã"],
-        molho: ["Vinagrete"]
+        molho: ["Molho de ervas"]
       },
       {
-        carne: ["Risoto de Frango"],
-        fixas: [fixas],
-        complemento: ["Purê de batatas"],
-        salada: ["Alface", "Beterraba Ralada"],
-        sobremesa: ["Mamão"],
-        molho: ["Molho de ervas"]
+        carne: ["Bife"],
+        fixas: fixas,
+        complemento: ["Abóbora ao forna"],
+        salada: ["Acelga", "Beterraba ralada"],
+        sobremesa: ["Banana"],
+        molho: ["Vinagrete"]
       },
       {
         carne: ["Feijoada e Feijoada vegetariana"],
         fixas: [fixas],
         complemento: ["Couve à mineira"],
-        salada: ["Vagem"],
-        molho: ["Molho de mostarda"],
+        salada: ["Alface", "Pepino rodelas"],
         sobremesa: ["Laranja"],
+        molho: ["Vinagrete"]
+      },
+      {
+        carne: ["Frango xadrez"],
+        fixas: [fixas],
+        complemento: ["Batata doce ao forno"],
+        salada: ["Chuchu cozido"],
+        molho: ["Molho de ervas"],
+        sobremesa: ["Maçã"],
       }
     ]
 
     return {
-      "dataFinal": "14/05/2023",
+      "dataFinal": "21/05/2023",
       "cardapio": MENU_TEMPORARY
     }
 }
