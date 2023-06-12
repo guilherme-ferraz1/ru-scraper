@@ -107,65 +107,65 @@ const formatData = (data) => {
 
     const MENU_TEMPORARY = [
       {
-        carne: ["Frango acebolado com curry"],
-        fixas: fixas,
-        complemento: ["Brócolis"],
-        salada: ["Alface", "Cenoura"],
-        sobremesa: ["Maçã"],
-        molho: ["Molho de mostarda"]
-      },
-      {
-        carne: ["Bife"],
+        carne: ["Carne bovina acebolada"],
         fixas: fixas,
         complemento: ["Batata doce ao forno"],
-        salada: ["Acelga", "Rabanete"],
-        sobremesa: ["Laranja"],
-        molho: ["Vinagrete"]
-      },
-      {
-        carne: ["Sassami de frango empanado"],
-        fixas: fixas,
-        complemento: ["Creme de ervilha"],
-        salada: ["Rúcula", "Beterraba"],
-        sobremesa: ["Pokã"],
+        salada: ["Agrião", "Beterraba Ralada"],
+        sobremesa: ["Bombom"],
         molho: ["Molho de ervas"]
       },
       {
-        carne: ["Filé de peixe à portuguesa"],
+        carne: ["Frango acebolado"],
         fixas: fixas,
-        complemento: ["Abóbora"],
-        salada: ["Chicória", "Pepino"],
+        complemento: ["Couve-flor cozida"],
+        salada: ["Rúcula", "Cenoura ralada"],
         sobremesa: ["Banana"],
         molho: ["Vinagrete"]
       },
       {
-        carne: ["Sobrecoxa de frango"],
+        carne: ["Bife bovino"],
         fixas: fixas,
-        complemento: ["Ratatouille"],
-        salada: ["Agrião", "Cenoura"],
+        complemento: ["Abóbora ao forno"],
+        salada: ["Couve Folha", "Pepino"],
         sobremesa: ["Laranja"],
         molho: ["Molho de mostarda"]
       },
       {
-        carne: ["Carreteiro"],
-        fixas: [fixas],
-        complemento: ["Mandioquinha"],
-        salada: ["Couve-folha", "Pepino"],
-        sobremesa: ["Mamão"],
-        molho: ["Molho de ervas"]
+        carne: ["Filé de peixe empanado"],
+        fixas: fixas,
+        complemento: ["Creme de ervilha"],
+        salada: ["Acelga", "Beterraba Ralada"],
+        sobremesa: ["Pokã/Morgote"],
+        molho: ["Vinagrete"]
       },
       {
-        carne: ["Frango ao molho vermelho"],
-        fixas: [fixas],
-        complemento: ["Batata inglesa ao forno"],
-        salada: ["Chuchu cozido"],
-        molho: ["Molho de mostarda"],
+        carne: ["Frango ao curry"],
+        fixas: fixas,
+        complemento: ["Batata palha"],
+        salada: ["Alface", "Rabanete Ralado"],
         sobremesa: ["Maçã"],
+        molho: ["Molho de mostarda"]
+      },
+      {
+        carne: ["Risoto de Frango"],
+        fixas: [fixas],
+        complemento: ["Batata doce ao forno"],
+        salada: ["Chicória", "Cenoura ralada"],
+        sobremesa: ["Melão"],
+        molho: ["Molho de mostarda"]
+      },
+      {
+        carne: ["Feijoada e Feijoada vegetariana"],
+        fixas: [fixas],
+        complemento: ["Couve à mineira"],
+        salada: ["Brócolis"],
+        molho: ["Molho de ervas"],
+        sobremesa: ["Laranja"],
       }
     ]
 
     return {
-      "dataFinal": "11/06/2023",
+      "dataFinal": "18/06/2023",
       "cardapio": MENU_TEMPORARY
     }
 }
