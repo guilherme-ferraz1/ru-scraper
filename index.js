@@ -107,44 +107,44 @@ const formatData = (data) => {
 
     const MENU_TEMPORARY = [
       {
-        carne: ["Frango ao curry"],
+        carne: ["Carne moída"],
         fixas: fixas,
-        complemento: ["Batata palha"],
-        salada: ["Alface"],
-        sobremesa: ["Laranja"],
+        complemento: ["Legumes refogados"],
+        salada: ["Rúcula", "Rabanete"],
+        sobremesa: ["Maçã"],
         molho: ["Molho de mostarda"]
       },
       {
-        carne: ["Bife bovino"],
+        carne: ["Iscas de frango à portuguesa"],
         fixas: fixas,
-        complemento: ["Abóbora"],
-        salada: ["Agrião", "Cenoura"],
+        complemento: ["Grão de bico com seleta de legumes"],
+        salada: ["Couve-folha", "Cenoura"],
         sobremesa: ["Banana"],
         molho: ["Vinagrete"]
       },
       {
-        carne: ["Iscas de frango com linguiça"],
+        carne: ["Bife bovino acebolado"],
         fixas: fixas,
-        complemento: ["Batata doce assada"],
-        salada: ["Acelga", "Pepino"],
+        complemento: ["Chuchu refogado"],
+        salada: ["Espinafre", "Beterraba"],
+        sobremesa: ["Laranja"],
+        molho: ["Molho de ervas"]
+      },
+      {
+        carne: ["Filé mignon suíno ao molho agridoce"],
+        fixas: fixas,
+        complemento: ["Batata inglesa com alecrim"],
+        salada: ["Chicória", "Pepino"],
         sobremesa: ["Maçã"],
-        molho: ["Molho de ervas"]
+        molho: ["Molho de Mostarda"]
       },
       {
-        carne: ["Peixe em posta"],
+        carne: ["Risoto de frango"],
         fixas: fixas,
-        complemento: ["Abobrinha refogada"],
-        salada: ["Rúcula", "Cenoura"],
-        sobremesa: ["Banana"],
+        complemento: ["Farofa"],
+        salada: ["Repolho roxo", "Cenoura"],
+        sobremesa: ["Iogurte"],
         molho: ["Molho de ervas"]
-      },
-      {
-        carne: ["Carne moída bovina"],
-        fixas: fixas,
-        complemento: ["Batata palha"],
-        salada: ["Couve folha", "Beterraba"],
-        sobremesa: ["Mamão"],
-        molho: ["Molho de mostarda"]
       },
       {
         carne: ["Carne assada de panela"],
@@ -165,7 +165,7 @@ const formatData = (data) => {
     ]
 
     return {
-      "dataFinal": "25/06/2023",
+      "dataFinal": "07/07/2023",
       "cardapio": MENU_TEMPORARY
     }
 }
