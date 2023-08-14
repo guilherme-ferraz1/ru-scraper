@@ -107,50 +107,50 @@ const formatData = (data) => {
 
     const MENU_TEMPORARY = [
       {
-        carne: ["Frango acebolado ao curry"],
+        carne: ["Almôndega bovina", "Sassami"],
         fixas: fixas,
-        complemento: ["Batata doce ao forno"],
-        salada: ["Chicória", "Pepino Rodelas"],
-        sobremesa: ["Laranja"],
+        complemento: ["Vegetais cozidos", "Farofa"],
+        salada: ["Rúcula", "Cenoura"],
+        sobremesa: ["Maçã"],
         molho: ["Molho de ervas"]
       },
       {
-        carne: ["Bife"],
-        fixas: fixas,
-        complemento: ["Farofa simples"],
-        salada: ["Repolho", "Beterraba Ralada"],
-        sobremesa: ["Maçã"],
-        molho: ["Molho de mostarda"]
-      },
-      {
-        carne: ["Bisteca suína acebolada"],
+        carne: ["Filé mignon suíno acebolado"],
         fixas: fixas,
         complemento: ["Abobrinha ao forno"],
-        salada: ["Alface", "Cenoura ralada"],
+        salada: ["Couve", "Rabanete"],
         sobremesa: ["Banana"],
         molho: ["Vinagrete"]
       },
       {
-        carne: ["Almôndega bovina"],
+        carne: ["Filé de peixe empanado"],
         fixas: fixas,
-        complemento: ["Creme de ervilha"],
-        salada: ["Agrião", "Beterraba ralada"],
+        complemento: ["Legumes refogados"],
+        salada: ["Espinafre", "Beterraba"],
         sobremesa: ["Laranja"],
+        molho: ["Molho de mostarda"]
+      },
+      {
+        carne: ["Bife acebolado"],
+        fixas: fixas,
+        complemento: ["Batata palha"],
+        salada: ["Chicória", "Pepino"],
+        sobremesa: ["Maçã"],
         molho: ["Molho de ervas"]
       },
       {
-        carne: ["Sobrecoxa de frango com alecrim"],
+        carne: ["Frango ao molho rosé"],
         fixas: fixas,
-        complemento: ["Repolho refogado"],
-        salada: ["Acelga", "Cenoura ralada"],
-        sobremesa: ["Bombom"],
-        molho: ["Vinagrete"]
+        complemento: ["Abóbora cozida"],
+        salada: ["Repolho roxo", "Cenoura"],
+        sobremesa: ["Melão"],
+        molho: ["Molho de mostarda"]
       },
       {
         carne: ["Não informado"],
         fixas: [fixas],
         complemento: ["Não informado"],
-        salada: ["Não informado", "Não informado"],
+        salada: ["Não informado"],
         sobremesa: ["Não informado"],
         molho: ["Não informado"]
       },
@@ -165,7 +165,7 @@ const formatData = (data) => {
     ]
 
     return {
-      "dataFinal": "13/08/2023",
+      "dataFinal": "18/08/2023",
       "cardapio": MENU_TEMPORARY
     }
 }
