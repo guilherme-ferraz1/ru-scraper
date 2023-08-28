@@ -1,12 +1,7 @@
 const CheerioModule = require('cheerio');
 const https = require('https')
-const axios = require('axios').create({
-  httpsAgent: new https.Agent({
-    rejectUnauthorized: false, // Desativa a verificação do certificado SSL
-  }),
-});
-const fs = require('fs');
-const PDFParser = require('pdf-parse');
+const axios = require('axios')
+
 
 const express = require("express");
 const bodyParser = require("body-parser");
@@ -230,37 +225,14 @@ const createItem = (menu) => {
   return itemObj
 }
 
-// Função para baixar o PDF e extrair o texto
-async function extrairTextoDoPDF(pdfUrl) {
-  try {
-    // Faz a solicitação HTTP para obter o PDF
-    const response = await axios.get(pdfUrl, {
-      responseType: 'arraybuffer',
-    });
-
-    // Converte os dados do PDF em um buffer
-    const pdfBuffer = Buffer.from(response.data);
-
-    // Usa o pdf-parse para extrair o texto do PDF
-    const pdfData = await PDFParser(pdfBuffer);
-    const textoDoPDF = pdfData.text;
-
-    console.log(textoDoPDF);
-  } catch (error) {
-    console.error('Erro ao baixar e extrair texto do PDF:', error);
-  }
-}
 const start = async () => {
-  extrairTextoDoPDF('https://siteru.paginas.ufsc.br/files/2023/08/26.-21.08-à-27.08_sem-final-de-semana.pdf');
-
-    // const data = await axios.get('', { httpsAgent })
-    //   .then((res) => {
-    //     console.log(res.data)
-    //     // const convertedResponse = convert(res?.data)
-    //     // const cardapio = formatData(convertedResponse)
-    //     // return cardapio
-    // })
-    // return data
+  const data = await axios.get('https://ru.ufsc.br/ru/')
+       .then((res) => {
+         const convertedResponse = convert(res?.data)
+         const cardapio = formatData(convertedResponse)
+         return cardapio
+     })
+     return data
 }
 
 app.get('/cardapio-floripa', async (req, res) => {
@@ -269,5 +241,3 @@ app.get('/cardapio-floripa', async (req, res) => {
 });
 
 app.listen(port)
-
-start()
