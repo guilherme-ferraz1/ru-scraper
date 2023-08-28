@@ -1,5 +1,12 @@
 const CheerioModule = require('cheerio');
-const axios = require('axios')
+const https = require('https')
+const axios = require('axios').create({
+  httpsAgent: new https.Agent({
+    rejectUnauthorized: false, // Desativa a verificação do certificado SSL
+  }),
+});
+const fs = require('fs');
+const PDFParser = require('pdf-parse');
 
 const express = require("express");
 const bodyParser = require("body-parser");
@@ -107,43 +114,43 @@ const formatData = (data) => {
 
     const MENU_TEMPORARY = [
       {
-        carne: ["Bife bovino"],
+        carne: ["Frango acebolado com açafrão e azeitonas"],
         fixas: fixas,
-        complemento: ["Batata palha", "Creme de milho"],
-        salada: ["Agrião", "Beterraba"],
+        complemento: ["Batata doce ao forno", "Polenta"],
+        salada: ["Repolho", "Beterraba"],
         sobremesa: ["Laranja"],
-        molho: ["Vinagrete"]
-      },
-      {
-        carne: ["Frango acebolado com curry"],
-        fixas: fixas,
-        complemento: ["Mandioquinha"],
-        salada: ["Alface", "Cenoura"],
-        sobremesa: ["Banana"],
         molho: ["Molho de mostarda"]
       },
       {
-        carne: ["Iscas de carne ao molho agridoce"],
+        carne: ["Filé mignon suíno ao molho shoyu"],
         fixas: fixas,
-        complemento: ["Farofa"],
-        salada: ["Rúcula", "Pepino"],
+        complemento: ["Ratatouille"],
+        salada: ["Chicória", "Rabanete"],
         sobremesa: ["Maçã"],
         molho: ["Vinagrete"]
       },
       {
-        carne: ["Iscas de frango com linguiça"],
+        carne: [" Bife bovino"],
         fixas: fixas,
-        complemento: ["Abóbora"],
-        salada: ["Acelga", "Beterraba"],
+        complemento: ["Chuchu refogado", "Purê de batatas"],
+        salada: ["Agrião", "Cenoura"],
         sobremesa: ["Banana"],
+        molho: ["Molho de ervas"]
+      },
+      {
+        carne: ["Frango com ervas, cebola e milho"],
+        fixas: fixas,
+        complemento: ["Abóbora ao forno"],
+        salada: ["Alface", "Pepino"],
+        sobremesa: ["Laranja"],
         molho: ["Molho de mostarda"]
       },
       {
-        carne: ["Sobrecoxa de frango"],
+        carne: ["Sassami de frango empanado"],
         fixas: fixas,
-        complemento: ["Ratatouille", "Sopa de legumes"],
-        salada: ["Couve folha", "Cenoura"],
-        sobremesa: ["Laranja"],
+        complemento: ["Abobrinha ao forno"],
+        salada: ["Rúcula", "Beterraba"],
+        sobremesa: ["Iogurte"],
         molho: ["Molho de ervas"]
       },
       {
@@ -165,7 +172,7 @@ const formatData = (data) => {
     ]
 
     return {
-      "dataFinal": "25/08/2023",
+      "dataFinal": "01/09/2023",
       "cardapio": MENU_TEMPORARY
     }
 }
@@ -223,14 +230,37 @@ const createItem = (menu) => {
   return itemObj
 }
 
+// Função para baixar o PDF e extrair o texto
+async function extrairTextoDoPDF(pdfUrl) {
+  try {
+    // Faz a solicitação HTTP para obter o PDF
+    const response = await axios.get(pdfUrl, {
+      responseType: 'arraybuffer',
+    });
+
+    // Converte os dados do PDF em um buffer
+    const pdfBuffer = Buffer.from(response.data);
+
+    // Usa o pdf-parse para extrair o texto do PDF
+    const pdfData = await PDFParser(pdfBuffer);
+    const textoDoPDF = pdfData.text;
+
+    console.log(textoDoPDF);
+  } catch (error) {
+    console.error('Erro ao baixar e extrair texto do PDF:', error);
+  }
+}
 const start = async () => {
-    const data = await axios.get('https://ru.ufsc.br/ru/')
-      .then((res) => {
-        const convertedResponse = convert(res?.data)
-        const cardapio = formatData(convertedResponse)
-        return cardapio
-    })
-    return data
+  extrairTextoDoPDF('https://siteru.paginas.ufsc.br/files/2023/08/26.-21.08-à-27.08_sem-final-de-semana.pdf');
+
+    // const data = await axios.get('', { httpsAgent })
+    //   .then((res) => {
+    //     console.log(res.data)
+    //     // const convertedResponse = convert(res?.data)
+    //     // const cardapio = formatData(convertedResponse)
+    //     // return cardapio
+    // })
+    // return data
 }
 
 app.get('/cardapio-floripa', async (req, res) => {
@@ -239,3 +269,5 @@ app.get('/cardapio-floripa', async (req, res) => {
 });
 
 app.listen(port)
+
+start()
