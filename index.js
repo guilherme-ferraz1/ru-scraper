@@ -109,44 +109,44 @@ const formatData = (data) => {
 
     const MENU_TEMPORARY = [
       {
-        carne: ["Sobrecoxa de frango com ervas"],
+        carne: ["Bife bovino acebolado"],
         fixas: fixas,
-        complemento: ["Legumes refogados I"],
-        salada: ["Acelga", "Pepino"],
-        sobremesa: ["Maçã"],
+        complemento: ["Abóbora cozida"],
+        salada: ["Alface", "Beterraba"],
+        sobremesa: ["Fruta"],
         molho: ["Molho de ervas"]
       },
       {
-        carne: ["Bife"],
+        carne: ["Filé mignon suíno com abacaxi"],
         fixas: fixas,
-        complemento: ["Abobrinha ao forno"],
-        salada: ["Rúcula", "Cenoura"],
-        sobremesa: ["Banana"],
+        complemento: ["Soja em grãos com seleta de legumes"],
+        salada: ["Agrião", "Cenoura"],
+        sobremesa: ["Fruta"],
         molho: ["Vinagrete"]
       },
       {
-        carne: ["Iscas de frango acebolado"],
+        carne: ["Frango com linguiça"],
         fixas: fixas,
-        complemento: ["Mandioquinha"],
-        salada: ["Chicória", "Beterraba"],
-        sobremesa: ["Laranja"],
+        complemento: ["Vagem cozida"],
+        salada: ["Acelga", "Pepino"],
+        sobremesa: ["Fruta"],
         molho: ["Molho de mostarda"]
       },
       {
-        carne: ["Bisteca suína ao molho de mostarda"],
+        carne: ["Filé de peixe empanado"],
         fixas: fixas,
-        complemento: ["Creme de ervilha"],
-        salada: ["Repolho roxo", "Cenoura"],
-        sobremesa: ["Maçã"],
+        complemento: ["Abobrinha ao forno"],
+        salada: ["Rúcula", "Cenoura"],
+        sobremesa: ["Fruta"],
         molho: ["Molho de ervas"]
       },
       {
-        carne: ["Sassami de frango empanado"],
+        carne: ["Almôndega bovina ao molho vermelho"],
         fixas: fixas,
-        complemento: ["Jardineira de legumes II"],
-        salada: ["Alface", "Beterraba"],
-        sobremesa: ["Banana"],
-        molho: ["Vinagrete"]
+        complemento: ["Batata doce cozida"],
+        salada: ["Couve folha", "Beterraba"],
+        sobremesa: ["Fruta"],
+        molho: ["Molho de mostarda"]
       },
       {
         carne: ["Não informado"],
@@ -167,7 +167,7 @@ const formatData = (data) => {
     ]
 
     return {
-      "dataFinal": "08/09/2023",
+      "dataFinal": "15/09/2023",
       "cardapio": MENU_TEMPORARY
     }
 }
