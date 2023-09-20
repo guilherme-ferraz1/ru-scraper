@@ -125,28 +125,28 @@ const formatData = (data) => {
         molho: ["Vinagrete"]
       },
       {
-        carne: ["Frango com linguiça"],
+        carne: ["Almôndega bovina"],
         fixas: fixas,
-        complemento: ["Vagem cozida"],
-        salada: ["Acelga", "Pepino"],
-        sobremesa: ["Fruta"],
+        complemento: ["Lentilha com legumesa"],
+        salada: ["Alface", "Cenoura"],
+        sobremesa: ["Banana"],
+        molho: ["Vinagrete"]
+      },
+      {
+        carne: ["Bife bovino ao molho agridoce"],
+        fixas: fixas,
+        complemento: ["Batata doce assada"],
+        salada: ["Agrião", "Beterraba"],
+        sobremesa: ["Laranja"],
         molho: ["Molho de mostarda"]
       },
       {
-        carne: ["Filé de peixe empanado"],
+        carne: ["Iscas de frango com molho curry"],
         fixas: fixas,
-        complemento: ["Abobrinha ao forno"],
-        salada: ["Rúcula", "Cenoura"],
-        sobremesa: ["Fruta"],
+        complemento: ["Cenoura cozida"],
+        salada: ["Acelga", "Rabanete"],
+        sobremesa: ["Maça"],
         molho: ["Molho de ervas"]
-      },
-      {
-        carne: ["Almôndega bovina ao molho vermelho"],
-        fixas: fixas,
-        complemento: ["Batata doce cozida"],
-        salada: ["Couve folha", "Beterraba"],
-        sobremesa: ["Fruta"],
-        molho: ["Molho de mostarda"]
       },
       {
         carne: ["Não informado"],
@@ -167,7 +167,7 @@ const formatData = (data) => {
     ]
 
     return {
-      "dataFinal": "15/09/2023",
+      "dataFinal": "22/09/2023",
       "cardapio": MENU_TEMPORARY
     }
 }
