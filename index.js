@@ -117,35 +117,35 @@ const formatData = (data) => {
         molho: ["Molho de ervas"]
       },
       {
-        carne: ["Filé mignon suíno com abacaxi"],
+        carne: ["Iscas de frango à portuguesa"],
         fixas: fixas,
-        complemento: ["Soja em grãos com seleta de legumes"],
-        salada: ["Agrião", "Cenoura"],
+        complemento: ["Grão de bico com seleta de legumes"],
+        salada: ["Couve", "Cenoura"],
+        sobremesa: ["Bombom"],
+        molho: ["Vinagrete"]
+      },
+      {
+        carne: ["Bife bovino acebolado"],
+        fixas: fixas,
+        complemento: ["Chuchu refogado"],
+        salada: ["Espinafre", "Beterraba"],
         sobremesa: ["Fruta"],
-        molho: ["Vinagrete"]
+        molho: ["Molho de ervas"]
       },
       {
-        carne: ["Almôndega bovina"],
+        carne: ["Filé mignon suíno ao molho agridoce"],
         fixas: fixas,
-        complemento: ["Lentilha com legumesa"],
-        salada: ["Alface", "Cenoura"],
-        sobremesa: ["Banana"],
-        molho: ["Vinagrete"]
-      },
-      {
-        carne: ["Bife bovino ao molho agridoce"],
-        fixas: fixas,
-        complemento: ["Batata doce assada"],
-        salada: ["Agrião", "Beterraba"],
-        sobremesa: ["Laranja"],
+        complemento: ["Batata inglesa com alecrim"],
+        salada: ["Chicória", "Pepino"],
+        sobremesa: ["Fruta"],
         molho: ["Molho de mostarda"]
       },
       {
-        carne: ["Iscas de frango com molho curry"],
+        carne: ["Risoto de frango"],
         fixas: fixas,
-        complemento: ["Cenoura cozida"],
-        salada: ["Acelga", "Rabanete"],
-        sobremesa: ["Maça"],
+        complemento: ["Farofa"],
+        salada: ["Repolho roxo", "Cenoura"],
+        sobremesa: ["Iogurte"],
         molho: ["Molho de ervas"]
       },
       {
@@ -167,7 +167,7 @@ const formatData = (data) => {
     ]
 
     return {
-      "dataFinal": "22/09/2023",
+      "dataFinal": "29/09/2023",
       "cardapio": MENU_TEMPORARY
     }
 }
