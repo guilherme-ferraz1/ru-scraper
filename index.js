@@ -109,44 +109,44 @@ const formatData = (data) => {
 
     const MENU_TEMPORARY = [
       {
-        carne: ["Iscas de frango ao molho agridoce"],
+        carne: ["Sassami empanado"],
         fixas: fixas,
-        complemento: ["Batata doce"],
-        salada: ["Alface", "Beterraba"],
-        sobremesa: ["Fruta"],
+        complemento: ["Lentilha refogada"],
+        salada: ["Repolho", "Cenoura"],
+        sobremesa: ["Laranja"],
         molho: ["Molho de ervas"]
       },
       {
-        carne: ["Sobrecoxa de frango"],
+        carne: ["Bisteca suína"],
         fixas: fixas,
-        complemento: ["Repolho refogado"],
-        salada: ["Alface", "Cenoura"],
-        sobremesa: ["Fruta"],
+        complemento: ["Couve flor"],
+        salada: ["Chicória", "Beterraba"],
+        sobremesa: ["Maçã"],
+        molho: ["Vinagrete"]
+      },
+      {
+        carne: ["Almôndega bovina"],
+        fixas: fixas,
+        complemento: ["Cenoura e chuchu"],
+        salada: ["Agrião", "Rabanete"],
+        sobremesa: ["Banana"],
         molho: ["Molho de mostarda"]
       },
       {
         carne: ["Quibe"],
         fixas: fixas,
-        complemento: ["Abóbora"],
-        salada: ["Rúcula", "Pepino"],
-        sobremesa: ["Fruta"],
-        molho: ["Vinagrete"]
-      },
-      {
-        carne: ["Bisteca suína"],
-        fixas: fixas,
-        complemento: ["Creme de ervilha"],
-        salada: ["Acelga", "Beterraba"],
-        sobremesa: ["Fruta"],
+        complemento: ["Aipim cozido"],
+        salada: ["Alface", "Pepino"],
+        sobremesa: ["Bombom"],
         molho: ["Molho de ervas"]
       },
       {
-        carne: ["Bife bovino"],
+        carne: ["Estrogonofe de frango"],
         fixas: fixas,
-        complemento: ["Chuchu refogado"],
-        salada: ["Chicória", "Rabanete"],
-        sobremesa: ["Fruta"],
-        molho: ["Molho de mostarda"]
+        complemento: ["Batata palha"],
+        salada: ["Acelga", "Beterraba"],
+        sobremesa: ["Laranja"],
+        molho: ["Molho de ervas"]
       },
       {
         carne: ["Não informado"],
@@ -167,7 +167,7 @@ const formatData = (data) => {
     ]
 
     return {
-      "dataFinal": "06/10/2023",
+      "dataFinal": "13/10/2023",
       "caBrdapio": MENU_TEMPORARY
     }
 }
