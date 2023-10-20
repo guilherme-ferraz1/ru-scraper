@@ -109,11 +109,11 @@ const formatData = (data) => {
 
     const MENU_TEMPORARY = [
       {
-        carne: ["Sassami empanado"],
+        carne: ["Iscas de frango acebolado com açafrão"],
         fixas: fixas,
-        complemento: ["Lentilha refogada"],
-        salada: ["Repolho", "Cenoura"],
-        sobremesa: ["Laranja"],
+        complemento: ["Abóbora assada"],
+        salada: ["Acelga", "Cenoura"],
+        sobremesa: ["Maçã"],
         molho: ["Molho de ervas"]
       },
       {
@@ -141,34 +141,34 @@ const formatData = (data) => {
         molho: ["Molho de ervas"]
       },
       {
-        carne: ["Estrogonofe de frango"],
+        carne: ["Quibe"],
         fixas: fixas,
-        complemento: ["Batata palha"],
-        salada: ["Acelga", "Beterraba"],
-        sobremesa: ["Laranja"],
+        complemento: ["Chuchu refogado"],
+        salada: ["Alface", "Beterraba"],
+        sobremesa: ["Banana"],
         molho: ["Molho de ervas"]
       },
       {
-        carne: ["Não informado"],
+        carne: ["Risoto de frango"],
         fixas: [fixas],
-        complemento: ["Não informado"],
-        salada: ["Não informado"],
-        sobremesa: ["Não informado"],
-        molho: ["Não informado"]
+        complemento: ["Batata doce"],
+        salada: ["Alface", "Beterraba"],
+        sobremesa: ["Laranja"],
+        molho: ["Molho de mostarda"]
       },
       {
-        carne: ["Não informado"],
+        carne: ["Filé de peixe com alcaparras"],
         fixas: [fixas],
-        complemento: ["Não informado"],
-        salada: ["Não informado"],
-        molho: ["Não informado"],
-        sobremesa: ["Não informado"],
+        complemento: ["Abobrinha"],
+        salada: ["Chicória", "Rabanete"],
+        molho: ["Molho de ervas"],
+        sobremesa: ["Banana"],
       }
     ]
 
     return {
-      "dataFinal": "13/10/2023",
-      "caBrdapio": MENU_TEMPORARY
+      "dataFinal": "22/10/2023",
+      "cardapio": MENU_TEMPORARY
     }
 }
 
