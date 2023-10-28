@@ -109,65 +109,65 @@ const formatData = (data) => {
 
     const MENU_TEMPORARY = [
       {
-        carne: ["Iscas de frango acebolado com açafrão"],
-        fixas: fixas,
-        complemento: ["Abóbora assada"],
-        salada: ["Acelga", "Cenoura"],
-        sobremesa: ["Maçã"],
-        molho: ["Molho de ervas"]
-      },
-      {
-        carne: ["Bisteca suína"],
-        fixas: fixas,
-        complemento: ["Couve flor"],
-        salada: ["Chicória", "Beterraba"],
-        sobremesa: ["Maçã"],
-        molho: ["Vinagrete"]
-      },
-      {
-        carne: ["Almôndega bovina"],
-        fixas: fixas,
-        complemento: ["Cenoura e chuchu"],
-        salada: ["Agrião", "Rabanete"],
-        sobremesa: ["Banana"],
-        molho: ["Molho de mostarda"]
-      },
-      {
-        carne: ["Quibe"],
-        fixas: fixas,
-        complemento: ["Aipim cozido"],
-        salada: ["Alface", "Pepino"],
-        sobremesa: ["Bombom"],
-        molho: ["Molho de ervas"]
-      },
-      {
-        carne: ["Quibe"],
-        fixas: fixas,
-        complemento: ["Chuchu refogado"],
+        carne: ["Carne moída com azeitonas"],
+        fixas: ["Arroz branco", "Arroz integral", "Feijão preto"],
+        complemento: ["Almoço: batata palha", "Jantar: macarrão integral alho e óleo"],
         salada: ["Alface", "Beterraba"],
-        sobremesa: ["Banana"],
-        molho: ["Molho de ervas"]
+        molho: ["Molho de mostarda"],
+        sobremesa: ["Fruta"]
+      },
+      {
+        carne: ["Frango à portuguesa"],
+        fixas: ["Arroz branco", "Arroz integral", "Feijão preto"],
+        complemento: ["Creme de ervilha"],
+        salada: ["Agrião", "Cenoura"],
+        molho: ["Vinagrete"],
+        sobremesa: ["Fruta"]
+      },
+      {
+        carne: ["Sobrecoxa de frango"],
+        fixas: ["Arroz branco", "Arroz integral", "Feijão preto"],
+        complemento: ["Polenta/Farofa"],
+        salada: ["Acelga", "Pepino"],
+        molho: ["Molho de ervas"],
+        sobremesa: ["Fruta"]
+      },
+      {
+        carne: ["Almoço: bife bovino", "Jantar: carne de panela"],
+        fixas: ["Arroz branco", "Arroz integral", "Feijão carioca"],
+        complemento: ["Brócolis e couve-flor"],
+        salada: ["Chicória", "Rabanete"],
+        molho: ["Molho de mostarda"],
+        sobremesa: ["Fruta"]
       },
       {
         carne: ["Risoto de frango"],
-        fixas: [fixas],
-        complemento: ["Batata doce"],
-        salada: ["Alface", "Beterraba"],
-        sobremesa: ["Laranja"],
-        molho: ["Molho de mostarda"]
+        fixas: ["Arroz branco", "Arroz integral", "Feijão com vegetais"],
+        complemento: ["Farofa"],
+        salada: ["Couve folha", "Beterraba"],
+        molho: ["Molho de ervas"],
+        sobremesa: ["Iogurte"]
       },
       {
-        carne: ["Filé de peixe com alcaparras"],
-        fixas: [fixas],
-        complemento: ["Abobrinha"],
-        salada: ["Chicória", "Rabanete"],
+        carne: ["Carne de panela"],
+        fixas: ["Arroz branco", "Arroz integral", "Feijão preto"],
+        complemento: ["Mandioquinha"],
+        salada: ["Repolho", "Beterraba"],
+        molho: ["Vinagrete"],
+        sobremesa: ["Fruta"]
+      },
+      {
+        carne: ["Estrogonofe de frango"],
+        fixas: ["Arroz branco", "Arroz integral", "Feijão preto"],
+        complemento: ["Batata palha"],
+        salada: ["Chuchu", "Rabanete"],
         molho: ["Molho de ervas"],
-        sobremesa: ["Banana"],
+        sobremesa: ["Fruta"]
       }
     ]
-
+    
     return {
-      "dataFinal": "22/10/2023",
+      "dataFinal": "29/10/2023",
       "cardapio": MENU_TEMPORARY
     }
 }
