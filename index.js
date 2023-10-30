@@ -109,67 +109,68 @@ const formatData = (data) => {
 
     const MENU_TEMPORARY = [
       {
-        carne: ["Carne moída com azeitonas"],
+        carne: ["Frango ao molho vermelho"],
         fixas: ["Arroz branco", "Arroz integral", "Feijão preto"],
-        complemento: ["Almoço: batata palha", "Jantar: macarrão integral alho e óleo"],
-        salada: ["Alface", "Beterraba"],
-        molho: ["Molho de mostarda"],
+        complemento: ["Batata doce ao forno"],
+        salada: ["Chicória", "Pepino"],
+        molho: ["Molho de ervas"],
         sobremesa: ["Fruta"]
       },
       {
-        carne: ["Frango à portuguesa"],
+        carne: ["Sassami de frango empanado"],
         fixas: ["Arroz branco", "Arroz integral", "Feijão preto"],
-        complemento: ["Creme de ervilha"],
-        salada: ["Agrião", "Cenoura"],
-        molho: ["Vinagrete"],
+        complemento: ["Cenoura e chuchu cozidos"],
+        salada: ["Repolho", "Beterraba"],
+        molho: ["Molho de mostarda"],
         sobremesa: ["Fruta"]
       },
       {
         carne: ["Sobrecoxa de frango"],
-        fixas: ["Arroz branco", "Arroz integral", "Feijão preto"],
-        complemento: ["Polenta/Farofa"],
-        salada: ["Acelga", "Pepino"],
-        molho: ["Molho de ervas"],
-        sobremesa: ["Fruta"]
-      },
-      {
-        carne: ["Almoço: bife bovino", "Jantar: carne de panela"],
-        fixas: ["Arroz branco", "Arroz integral", "Feijão carioca"],
-        complemento: ["Brócolis e couve-flor"],
-        salada: ["Chicória", "Rabanete"],
-        molho: ["Molho de mostarda"],
-        sobremesa: ["Fruta"]
-      },
-      {
-        carne: ["Risoto de frango"],
-        fixas: ["Arroz branco", "Arroz integral", "Feijão com vegetais"],
+        fixas: ["Arroz branco", "Arroz integral", "Feijão preto com vegetais"],
         complemento: ["Farofa"],
-        salada: ["Couve folha", "Beterraba"],
-        molho: ["Molho de ervas"],
-        sobremesa: ["Iogurte"]
-      },
-      {
-        carne: ["Carne de panela"],
-        fixas: ["Arroz branco", "Arroz integral", "Feijão preto"],
-        complemento: ["Mandioquinha"],
-        salada: ["Repolho", "Beterraba"],
+        salada: ["Alface", "Cenoura"],
         molho: ["Vinagrete"],
         sobremesa: ["Fruta"]
       },
       {
-        carne: ["Estrogonofe de frango"],
+        carne: ["Almôndega bovina"],
         fixas: ["Arroz branco", "Arroz integral", "Feijão preto"],
-        complemento: ["Batata palha"],
-        salada: ["Chuchu", "Rabanete"],
+        complemento: ["Creme de ervilha"],
+        salada: ["Espinafre", "Beterraba"],
         molho: ["Molho de ervas"],
         sobremesa: ["Fruta"]
+      },
+      {
+        carne: ["Sobrecoxa de frango com alecrim"],
+        fixas: ["Arroz branco", "Arroz integral", "Feijão carioca"],
+        complemento: ["Almoço: Repolho refogado", "Jantar: Polenta"],
+        salada: ["Acelga", "Rabanete"],
+        molho: ["Molho de mostarda"],
+        sobremesa: ["Fruta"]
+      },
+      {
+        carne: ["EM BREVE"],
+        fixas: ["EM BREVE"],
+        complemento: ["EM BREVE"],
+        salada: ["EM BREVE"],
+        molho: ["EM BREVE"],
+        sobremesa: ["EM BREVE"]
+      },
+      {
+        carne: ["EM BREVE"],
+        fixas: ["EM BREVE"],
+        complemento: ["EM BREVE"],
+        salada: ["EM BREVE"],
+        molho: ["EM BREVE"],
+        sobremesa: ["EM BREVE"]
       }
     ]
     
     return {
-      "dataFinal": "29/10/2023",
+      "dataFinal": "05/11/2023",
       "cardapio": MENU_TEMPORARY
     }
+    
 }
 
 const createItem = (menu) => {
