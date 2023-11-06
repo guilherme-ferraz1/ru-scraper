@@ -60,117 +60,67 @@ const convert = (html) => {
   }
 
 const formatData = (data) => { 
-  //  const cleanedData = data.map((obj) => Object.values(obj))
-  //  const arr1d = [].concat(...cleanedData)
-  //  const nonEmpty = arr1d.filter((e) => e !== '')
-   
-  //  const segunda = nonEmpty.slice(0, nonEmpty.indexOf('TERÇA-FEIRA'))
-  //  const terca = nonEmpty.slice(nonEmpty.indexOf('TERÇA-FEIRA'), nonEmpty.indexOf('QUARTA-FEIRA'))
-  //  const quarta = nonEmpty.slice(nonEmpty.indexOf('QUARTA-FEIRA'), nonEmpty.indexOf('QUINTA-FEIRA'))
-  //  const quinta = nonEmpty.slice(nonEmpty.indexOf('QUINTA-FEIRA'), nonEmpty.indexOf('SEXTA-FEIRA'))
-  //  const sexta = nonEmpty.slice(nonEmpty.indexOf('SEXTA-FEIRA'))
-  // //  const sabado = nonEmpty.slice(nonEmpty.indexOf('SABADO'), nonEmpty.indexOf('DOMINGO'))
-  // //  const domingo = nonEmpty.slice(nonEmpty.indexOf('DOMINGO'))
-  
-  //  const date = nonEmpty[nonEmpty.indexOf('SEXTA-FEIRA') + 2]
-    
-  //   const dia = date.substring(0, 2)
-  //   const mes = mesesDic[date.substring(3, 6)]
-  //   const ano =  date.substring(7, 9)
-
-  //   let dataFinal = undefined
-  //   if (dia && mes && ano ) dataFinal = `${dia}/${mes}/${ano}`
-
-    // const menu = [
-    //   createItem(segunda),
-    //   createItem(terca),
-    //   createItem(quarta),
-    //   createItem(quinta),
-    //   createItem(sexta),
-    //   {
-    //     carne: ["Não definido"],
-    //     fixas: ["Não definido"],
-    //     complemento: ["Não definido"],
-    //     salada: ["Não definido"],
-    //     molho: ["Não definido"],
-    //     sobremesa: ["Não definido"]
-    //   },
-    //   {
-    //     carne: ["Não definido"],
-    //     fixas: ["Não definido"],
-    //     complemento: ["Não definido"],
-    //     salada: ["Não definido"],
-    //     molho: ["Não definido"],
-    //     sobremesa: ["Não definido"]
-    //   },
-    // ]
-    
-    const fixas = ["Arroz Parbolizado", "Arroz integral", "Feijão"]
-
-    const MENU_TEMPORARY = [
-      {
-        carne: ["Frango ao molho vermelho"],
-        fixas: ["Arroz branco", "Arroz integral", "Feijão preto"],
-        complemento: ["Batata doce ao forno"],
-        salada: ["Chicória", "Pepino"],
-        molho: ["Molho de ervas"],
-        sobremesa: ["Fruta"]
-      },
-      {
-        carne: ["Sassami de frango empanado"],
-        fixas: ["Arroz branco", "Arroz integral", "Feijão preto"],
-        complemento: ["Cenoura e chuchu cozidos"],
-        salada: ["Repolho", "Beterraba"],
-        molho: ["Molho de mostarda"],
-        sobremesa: ["Fruta"]
-      },
-      {
-        carne: ["Sobrecoxa de frango"],
-        fixas: ["Arroz branco", "Arroz integral", "Feijão preto com vegetais"],
-        complemento: ["Farofa"],
-        salada: ["Alface", "Cenoura"],
-        molho: ["Vinagrete"],
-        sobremesa: ["Fruta"]
-      },
-      {
-        carne: ["Almôndega bovina"],
-        fixas: ["Arroz branco", "Arroz integral", "Feijão preto"],
-        complemento: ["Creme de ervilha"],
-        salada: ["Espinafre", "Beterraba"],
-        molho: ["Molho de ervas"],
-        sobremesa: ["Fruta"]
-      },
-      {
-        carne: ["Sobrecoxa de frango com alecrim"],
-        fixas: ["Arroz branco", "Arroz integral", "Feijão carioca"],
-        complemento: ["Almoço: Repolho refogado", "Jantar: Polenta"],
-        salada: ["Acelga", "Rabanete"],
-        molho: ["Molho de mostarda"],
-        sobremesa: ["Fruta"]
-      },
-      {
-        carne: ["EM BREVE"],
-        fixas: ["EM BREVE"],
-        complemento: ["EM BREVE"],
-        salada: ["EM BREVE"],
-        molho: ["EM BREVE"],
-        sobremesa: ["EM BREVE"]
-      },
-      {
-        carne: ["EM BREVE"],
-        fixas: ["EM BREVE"],
-        complemento: ["EM BREVE"],
-        salada: ["EM BREVE"],
-        molho: ["EM BREVE"],
-        sobremesa: ["EM BREVE"]
-      }
-    ]
-    
     return {
-      "dataFinal": "05/11/2023",
-      "cardapio": MENU_TEMPORARY
+      "dataFinal": "12/11/2023",
+      "cardapio": [
+        {
+          "carne": ["Carne moída com azeitonas"],
+          "fixas": ["Arroz branco", "Arroz integral", "Feijão preto"],
+          "complemento": ["Almoço: Legumes refogados", "Jantar: Macarrão com ervas"],
+          "salada": ["Acelga", "Cenoura"],
+          "molho": ["Molho de ervas"],
+          "sobremesa": ["Fruta"]
+        },
+        {
+          "carne": ["Filé mignon suíno ao molho agridoce"],
+          "fixas": ["Arroz branco", "Arroz integral", "Feijão preto com vegetais"],
+          "complemento": ["Farofa"],
+          "salada": ["Couve", "Rabanete"],
+          "molho": ["Vinagrete"],
+          "sobremesa": ["Fruta"]
+        },
+        {
+          "carne": ["Filé de peixe empanado"],
+          "fixas": ["Arroz branco", "Arroz integral", "Feijão preto"],
+          "complemento": ["Grão de bico"],
+          "salada": ["Espinafre", "Beterraba"],
+          "molho": ["Molho de mostarda"],
+          "sobremesa": ["Fruta"]
+        },
+        {
+          "carne": ["Bife bovino"],
+          "fixas": ["Arroz branco", "Arroz integral", "Feijão preto"],
+          "complemento": ["Couve-flor"],
+          "salada": ["Chicória", "Pepino"],
+          "molho": ["Molho de ervas"],
+          "sobremesa": ["Fruta"]
+        },
+        {
+          "carne": ["Estrogonofe de frango"],
+          "fixas": ["Arroz branco", "Arroz integral", "Feijão carioca"],
+          "complemento": ["Batata palha"],
+          "salada": ["Repolho roxo", "Cenoura"],
+          "molho": ["Molho de mostarda"],
+          "sobremesa": ["Fruta"]
+        },
+        {
+          "carne": ["EM BREVE"],
+          "fixas": ["Arroz branco", "Arroz integral", "Feijão preto"],
+          "complemento": ["EM BREVE"],
+          "salada": ["EM BREVE"],
+          "molho": ["EM BREVE"],
+          "sobremesa": ["EM BREVE"]
+        },
+        {
+          "carne": ["EM BREVE"],
+          "fixas": ["Arroz branco", "Arroz integral", "Feijão preto"],
+          "complemento": ["EM BREVE"],
+          "salada": ["EM BREVE"],
+          "molho": ["EM BREVE"],
+          "sobremesa": ["EM BREVE"]
+        }
+      ]
     }
-    
 }
 
 const createItem = (menu) => {
