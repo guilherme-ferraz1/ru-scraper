@@ -61,46 +61,46 @@ const convert = (html) => {
 
 const formatData = (data) => { 
     return {
-      "dataFinal": "12/11/2023",
+      "dataFinal": "19/11/2023",
       "cardapio": [
         {
-          "carne": ["Carne moída com azeitonas"],
+          "carne": ["Bife bovino"],
           "fixas": ["Arroz branco", "Arroz integral", "Feijão preto"],
-          "complemento": ["Almoço: Legumes refogados", "Jantar: Macarrão com ervas"],
-          "salada": ["Acelga", "Cenoura"],
-          "molho": ["Molho de ervas"],
-          "sobremesa": ["Fruta"]
-        },
-        {
-          "carne": ["Filé mignon suíno ao molho agridoce"],
-          "fixas": ["Arroz branco", "Arroz integral", "Feijão preto com vegetais"],
-          "complemento": ["Farofa"],
-          "salada": ["Couve", "Rabanete"],
+          "complemento": ["Almoço: Vagem", "Jantar: Creme de milho"],
+          "salada": ["Agrião", "Rabanete"],
           "molho": ["Vinagrete"],
           "sobremesa": ["Fruta"]
         },
         {
-          "carne": ["Filé de peixe empanado"],
-          "fixas": ["Arroz branco", "Arroz integral", "Feijão preto"],
-          "complemento": ["Grão de bico"],
-          "salada": ["Espinafre", "Beterraba"],
-          "molho": ["Molho de mostarda"],
-          "sobremesa": ["Fruta"]
-        },
-        {
-          "carne": ["Bife bovino"],
-          "fixas": ["Arroz branco", "Arroz integral", "Feijão preto"],
-          "complemento": ["Couve-flor"],
-          "salada": ["Chicória", "Pepino"],
-          "molho": ["Molho de ervas"],
-          "sobremesa": ["Fruta"]
-        },
-        {
-          "carne": ["Estrogonofe de frango"],
+          "carne": ["Iscas de frango ao molho de mostarda"],
           "fixas": ["Arroz branco", "Arroz integral", "Feijão carioca"],
-          "complemento": ["Batata palha"],
-          "salada": ["Repolho roxo", "Cenoura"],
+          "complemento": ["Mandioquinha"],
+          "salada": ["Alface", "Cenoura"],
           "molho": ["Molho de mostarda"],
+          "sobremesa": ["Fruta"]
+        },
+        {
+          "carne": ["Carne moída com azeitonas"],
+          "fixas": ["Arroz branco", "Arroz integral", "Feijão preto com vegetais"],
+          "complemento": ["Farofa"],
+          "salada": ["Repolho roxo", "Pepino"],
+          "molho": ["Vinagrete"],
+          "sobremesa": ["Fruta"]
+        },
+        {
+          "carne": ["Frango com linguiça"],
+          "fixas": ["Arroz branco", "Arroz integral", "Feijão preto"],
+          "complemento": ["Batata palha"],
+          "salada": ["Acelga", "Cenoura"],
+          "molho": ["Molho de mostarda"],
+          "sobremesa": ["Fruta"]
+        },
+        {
+          "carne": ["Sobrecoxa de frango"],
+          "fixas": ["Arroz branco", "Arroz integral", "Feijão preto"],
+          "complemento": ["Ratatouille"],
+          "salada": ["Couve", "Cenoura"],
+          "molho": ["Molho de ervas"],
           "sobremesa": ["Fruta"]
         },
         {
