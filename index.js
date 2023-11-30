@@ -60,67 +60,68 @@ const convert = (html) => {
   }
 
 const formatData = (data) => { 
-    return {
-      "dataFinal": "19/11/2023",
-      "cardapio": [
-        {
-          "carne": ["Bife bovino"],
-          "fixas": ["Arroz branco", "Arroz integral", "Feijão preto"],
-          "complemento": ["Almoço: Vagem", "Jantar: Creme de milho"],
-          "salada": ["Agrião", "Rabanete"],
-          "molho": ["Vinagrete"],
-          "sobremesa": ["Fruta"]
-        },
-        {
-          "carne": ["Iscas de frango ao molho de mostarda"],
-          "fixas": ["Arroz branco", "Arroz integral", "Feijão carioca"],
-          "complemento": ["Mandioquinha"],
-          "salada": ["Alface", "Cenoura"],
-          "molho": ["Molho de mostarda"],
-          "sobremesa": ["Fruta"]
-        },
-        {
-          "carne": ["Carne moída com azeitonas"],
-          "fixas": ["Arroz branco", "Arroz integral", "Feijão preto com vegetais"],
-          "complemento": ["Farofa"],
-          "salada": ["Repolho roxo", "Pepino"],
-          "molho": ["Vinagrete"],
-          "sobremesa": ["Fruta"]
-        },
-        {
-          "carne": ["Frango com linguiça"],
-          "fixas": ["Arroz branco", "Arroz integral", "Feijão preto"],
-          "complemento": ["Batata palha"],
-          "salada": ["Acelga", "Cenoura"],
-          "molho": ["Molho de mostarda"],
-          "sobremesa": ["Fruta"]
-        },
-        {
-          "carne": ["Sobrecoxa de frango"],
-          "fixas": ["Arroz branco", "Arroz integral", "Feijão preto"],
-          "complemento": ["Ratatouille"],
-          "salada": ["Couve", "Cenoura"],
-          "molho": ["Molho de ervas"],
-          "sobremesa": ["Fruta"]
-        },
-        {
-          "carne": ["EM BREVE"],
-          "fixas": ["Arroz branco", "Arroz integral", "Feijão preto"],
-          "complemento": ["EM BREVE"],
-          "salada": ["EM BREVE"],
-          "molho": ["EM BREVE"],
-          "sobremesa": ["EM BREVE"]
-        },
-        {
-          "carne": ["EM BREVE"],
-          "fixas": ["Arroz branco", "Arroz integral", "Feijão preto"],
-          "complemento": ["EM BREVE"],
-          "salada": ["EM BREVE"],
-          "molho": ["EM BREVE"],
-          "sobremesa": ["EM BREVE"]
-        }
-      ]
-    }
+  return {
+    "dataFinal": "03/12/2023",
+    "cardapio": [
+      {
+        "carne": ["Sobrecoxa de frango com ervas"],
+        "fixas": ["Arroz branco", "Arroz integral", "Feijão carioca"],
+        "complemento": ["Almoço: Legumes refogados", "Jantar: Macarrão com ervas"],
+        "salada": ["Acelga", "Pepino"],
+        "molho": ["Molho de ervas"],
+        "sobremesa": ["Fruta"]
+      },
+      {
+        "carne": ["Almoço: Bife bovino", "Jantar: Carne assada de panela"],
+        "fixas": ["Arroz branco", "Arroz integral", "Feijão preto"],
+        "complemento": ["Abobrinha ao forno"],
+        "salada": ["Rúcula", "Cenoura"],
+        "molho": ["Vinagrete"],
+        "sobremesa": ["Fruta"]
+      },
+      {
+        "carne": ["Bisteca suína acebolada"],
+        "fixas": ["Arroz branco", "Arroz integral", "Feijão preto"],
+        "complemento": ["Brócolis"],
+        "salada": ["Chicória", "Beterraba"],
+        "molho": ["Molho de mostarda"],
+        "sobremesa": ["Fruta"]
+      },
+      {
+        "carne": ["Sassami de frango empanado"],
+        "fixas": ["Arroz branco", "Arroz integral", "Feijão preto"],
+        "complemento": ["Creme de ervilha"],
+        "salada": ["Repolho roxo", "Cenoura"],
+        "molho": ["Molho de ervas"],
+        "sobremesa": ["Fruta"]
+      },
+      {
+        "carne": ["Risoto de frango"],
+        "fixas": ["Arroz branco", "Arroz integral", "Feijão preto com vegetais"],
+        "complemento": ["Batata palha"],
+        "salada": ["Alface", "Beterraba"],
+        "molho": ["Molho de mostarda"],
+        "sobremesa": ["Fruta"]
+      },
+      {
+        "carne": ["EM BREVE"],
+        "fixas": ["Arroz branco", "Arroz integral", "Feijão preto"],
+        "complemento": ["EM BREVE"],
+        "salada": ["EM BREVE"],
+        "molho": ["EM BREVE"],
+        "sobremesa": ["EM BREVE"]
+      },
+      {
+        "carne": ["EM BREVE"],
+        "fixas": ["Arroz branco", "Arroz integral", "Feijão preto"],
+        "complemento": ["EM BREVE"],
+        "salada": ["EM BREVE"],
+        "molho": ["EM BREVE"],
+        "sobremesa": ["EM BREVE"]
+      }
+    ]
+  }
+  
 }
 
 const createItem = (menu) => {
